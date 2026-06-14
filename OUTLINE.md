@@ -54,7 +54,7 @@
 - 4.2 JIT（Just-In-Time）の考え方（v3 で標準化）
 - 4.3 v4 の新エンジン（Oxide / Rust・Lightning CSS）と高速化
 - 4.4 自動コンテンツ検出（v4）と `@source`／旧 `content` 配列の違い
-- 4.5 `@import "tailwindcss"` が展開するもの（base / components / utilities レイヤー）
+- 4.5 `@import "tailwindcss"` が展開するもの（theme / base / components / utilities レイヤー）
 - 4.6 CSS Cascade Layers（`@layer`）と詳細度の制御
 - 4.7 任意の値（arbitrary value）が動的に解決される仕組み
 - 4.8 スタイル衝突の解決（後勝ち・`!` important・prefix）
@@ -97,7 +97,7 @@
 **ねらい:** v4 を最短で動かし、各導入経路の違いを理解する。
 
 - 7.1 導入経路の地図（Vite プラグイン / PostCSS / CLI / CDN）
-- 7.2 最速の入口: Play CDN と公式 Playground（学習用途）
+- 7.2 最速の入口: Play CDN（`@tailwindcss/browser`、開発・学習用）と Tailwind Play（play.tailwindcss.com）
 - 7.3 推奨: `@tailwindcss/vite` での導入手順
 - 7.4 PostCSS（`@tailwindcss/postcss`）での導入
 - 7.5 CLI（`@tailwindcss/cli`）での導入とウォッチ
@@ -110,7 +110,7 @@
 **ねらい:** 主要フレームワークでの導入差を実コードで示す。**Rails を最重点。**
 
 - 8.1 導入差が生まれる理由（ビルドパイプラインの違い）
-- 8.2 **Rails 詳説 ①**: `tailwindcss-rails` gem（`cssbundling` ではない純正経路）と `bin/rails tailwindcss:install`
+- 8.2 **Rails 詳説 ①**: `tailwindcss-rails` gem（Node ビルド不要の Rails 向け gem 経路。スタンドアロン実行ファイルを使う）と `bin/rails tailwindcss:install`
 - 8.3 **Rails 詳説 ②**: Propshaft / Sprockets・`app/assets/tailwind/application.css`・`bin/dev` とウォッチ
 - 8.4 **Rails 詳説 ③**: `cssbundling-rails` + esbuild/Vite 経路との比較・使い分け
 - 8.5 **Rails 詳説 ④**: importmap 構成での注意点と Turbo との相性
@@ -140,6 +140,8 @@
 各章共通の方針: 「Tailwind 以前の素の CSS → 対応するユーティリティ → 出力／生成 CSS → 実務での型」。
 
 ## 第10章 Spacing
+**ねらい:** 余白を「数値の暗記」ではなくスケール（制約）として捉え、一貫した間隔設計の土台を作る。
+
 - 10.1 spacing スケールの思想（4px 基準・`--spacing` の動的計算 / v4）
 - 10.2 padding（`p-*` `px-*` `pt-*` …）
 - 10.3 margin と負のマージン（`-m-*`）
@@ -149,6 +151,8 @@
 - ◎ docs: Padding / Margin / Gap / Space
 
 ## 第11章 Typography
+**ねらい:** 文字まわりのユーティリティを体系的に押さえ、可読性の高い本文・記事を組めるようにする。
+
 - 11.1 フォントサイズ・行間（`text-*` と行間のセット）
 - 11.2 フォントファミリ・ウェイト・字間（`font-*` `tracking-*`）
 - 11.3 行揃え・装飾・変形（`text-center` `underline` `uppercase` …）
@@ -158,6 +162,8 @@
 - ◎ docs: Font size / Typography plugin
 
 ## 第12章 Colors
+**ねらい:** v4 の oklch パレットと不透明度・グラデーションを理解し、ブランド色を破綻なく組み込む。
+
 - 12.1 デフォルトパレットと oklch / P3（v4）
 - 12.2 背景・文字・ボーダー・リング色
 - 12.3 不透明度の指定（`bg-black/50` と `color-mix()` / v4）
@@ -167,6 +173,8 @@
 - ◎ docs: Colors / Background / Gradient
 
 ## 第13章 Borders と Effects
+**ねらい:** 境界・角丸・影・フィルタで、トークンに沿った立体感とフォーカス表現を作れるようにする。
+
 - 13.1 ボーダー幅・色・スタイル
 - 13.2 角丸（`rounded-*`・論理プロパティ対応）
 - 13.3 影（`shadow-*`・`inset-shadow-*` / v4）・リング（`ring-*`）
@@ -176,6 +184,8 @@
 - ◎ docs: Border / Box shadow / Filter / Ring
 
 ## 第14章 Layout
+**ねらい:** display・position・サイズ・コンテナクエリで、ページの骨格を組み立てられるようにする。
+
 - 14.1 display（`block` `inline-*` `hidden` …）
 - 14.2 position と `inset-*`・`z-*`
 - 14.3 サイズ（`w-*` `h-*` `size-*`・`min/max`・論理プロパティ）
@@ -185,6 +195,8 @@
 - ◎ docs: Display / Position / Width / Container queries
 
 ## 第15章 Flexbox
+**ねらい:** 既知の Flexbox 知識をユーティリティに対応づけ、ナビ・ツールバーを素早く組めるようにする。
+
 - 15.1 Flexbox の素の CSS と Tailwind の対応表
 - 15.2 方向・折り返し（`flex-row` `flex-wrap`）
 - 15.3 主軸・交差軸の配置（`justify-*` `items-*` `content-*`）
@@ -194,6 +206,8 @@
 - ◎ docs: Flex / Justify content / Align items
 
 ## 第16章 Grid
+**ねらい:** Grid をユーティリティで表現し、カードグリッドやダッシュボードのレイアウトを組めるようにする。
+
 - 16.1 Grid の素の CSS と Tailwind の対応表
 - 16.2 列・行の定義（`grid-cols-*` `grid-rows-*`・任意トラック）
 - 16.3 配置とスパン（`col-span-*` `row-start-*`・`auto-rows`）
@@ -207,6 +221,8 @@
 # 第5部 実践的な Tailwind CSS
 
 ## 第17章 レスポンシブデザイン
+**ねらい:** モバイルファーストの上書きモデルを理解し、過剰な分岐を避けた設計ができるようにする。
+
 - 17.1 モバイルファースト原則（無印＝全幅、`md:` 以上で上書き）
 - 17.2 デフォルトブレークポイントと `--breakpoint-*` のカスタム
 - 17.3 範囲指定・`max-*` バリアント
@@ -215,6 +231,8 @@
 - ◎ docs: Responsive design / Container queries
 
 ## 第18章 ダークモード
+**ねらい:** `dark:` の仕組みと切替戦略を理解し、ちらつきのないダークモードを実装できるようにする。
+
 - 18.1 `dark:` バリアントの仕組み
 - 18.2 `media`（OS 連動）と `class`/`selector`（手動切替）戦略
 - 18.3 v4 でのダークモード設定（`@custom-variant dark`）
@@ -223,6 +241,8 @@
 - ◎ docs: Dark mode
 
 ## 第19章 アニメーション
+**ねらい:** transition・transform・カスタムアニメーションを、アクセシビリティに配慮して節度よく使えるようにする。
+
 - 19.1 transition（`transition` `duration-*` `ease-*` `delay-*`）
 - 19.2 transform（`translate` `scale` `rotate`・3D / v4）
 - 19.3 組み込みアニメーション（`animate-spin` `animate-pulse` …）とカスタム（`@theme` の `--animate-*`）
@@ -232,6 +252,8 @@
 - ◎ docs: Transition / Transform / Animation
 
 ## 第20章 フォームデザイン
+**ねらい:** フォーム要素のばらつきを整え、状態（focus/invalid 等）を見た目に反映できるようにする。
+
 - 20.1 素のフォーム要素のばらつきと `@tailwindcss/forms`
 - 20.2 入力・選択・チェック/ラジオのスタイリング
 - 20.3 状態表現（`focus` `invalid` `disabled` `required` `peer-*` バリデーション表示）
@@ -240,6 +262,8 @@
 - ◎ docs: forms plugin / Hover, focus & other states
 
 ## 第21章 アクセシビリティ
+**ねらい:** ユーティリティは見た目・意味は HTML という役割分担を踏まえ、a11y を落とさない実装を身につける。
+
 - 21.1 ユーティリティと a11y の関係（クラスは見た目、意味は HTML）
 - 21.2 視覚的に隠す `sr-only` / `not-sr-only`
 - 21.3 フォーカス可視化（`focus-visible` とリング）
@@ -253,6 +277,8 @@
 # 第6部 コンポーネント設計
 
 ## 第22章 UI コンポーネントを作る
+**ねらい:** 重複の正しい捉え方を学び、`@apply` ではなくコンポーネント抽出を選ぶ判断軸を持つ。
+
 - 22.1 「重複」をどう捉えるか（テンプレートのループ・部分テンプレート）
 - 22.2 `@apply` の役割と落とし穴（いつ使い、いつ使わないか）
 - 22.3 `@apply` よりコンポーネント抽出が推奨される理由（作者の見解）
@@ -261,12 +287,15 @@
 - ◎ docs: Styling with Utility Classes（Managing duplication）/ Functions & directives
 
 ## 第23章 再利用性を高める
+**ねらい:** 条件付きクラス・衝突解消・バリアント設計の定番手法で、長いクラス列を保守可能にする。
+
 - 23.1 クラス名が長くなる問題への現実的対処
 - 23.2 条件付きクラスの組み立て（`clsx` / `classnames`）
 - 23.3 クラス衝突の解消（`tailwind-merge`）
 - 23.4 バリアント設計: **Class Variance Authority（CVA）**
 - 23.5 デザイントークンを単一の真実にする（テーマ ＋ セマンティック名）
 - 23.6 実務: デザインシステムへの育て方
+- 23.7 AI 生成コードとクラス設計（生成された長いクラス列を CVA／コンポーネントへ畳み込む、レビューで整える）
 - ◎ docs / ○ CVA・tailwind-merge・clsx の各 README
 
 ## 第24章 Rails でのコンポーネント設計
@@ -282,6 +311,8 @@
 - ◎ tailwindcss-rails / ○ ViewComponent docs / ○ Phlex docs
 
 ## 第25章 React でのコンポーネント設計
+**ねらい:** `cn` ヘルパー・CVA・Headless UI を組み合わせ、型安全で再利用可能な React コンポーネントを設計する。
+
 - 25.1 props でバリアントを受けるコンポーネント設計
 - 25.2 `clsx` + `tailwind-merge`（`cn` ヘルパー）の定番パターン
 - 25.3 CVA による型安全なバリアント
@@ -295,15 +326,20 @@
 # 第7部 実務での Tailwind CSS
 
 ## 第26章 プロジェクト構成
+**ねらい:** CSS エントリ・トークン・レイヤーの置き場所を決め、大規模化に耐える構成とチーム運用を整える。
+
 - 26.1 CSS エントリの構成（`@import "tailwindcss"` ＋ `@theme` ＋ カスタムレイヤー）
 - 26.2 テーマ・トークンの置き場所と命名規約
 - 26.3 カスタムユーティリティ／コンポーネント／ベースの分け方（`@layer` `@utility`）
 - 26.4 大規模化への備え（ファイル分割・`@source`・モノレポ）
 - 26.5 CI でのビルドと出力サイズの監視
 - 26.6 チームでのクラス順統一・レビュー観点
+- 26.7 AI が従えるテーマ・規約の作り方（`@theme` で意味的な色・余白・フォントを定義し、コンポーネント規約・命名を言語化しておくと、AI 出力をブランドに沿わせやすい）
 - ◎ docs: Functions & directives / Detecting classes / Theme
 
 ## 第27章 Tailwind CSS のアンチパターン
+**ねらい:** 現場で頻発する崩れ方を具体例で示し、その原因と矯正手順を身につける。
+
 - 27.1 任意の値（`[...]`）の乱用と一貫性の崩壊
 - 27.2 `@apply` でユーティリティを CSS に逃がしすぎる
 - 27.3 クラス名の動的文字列結合で検出漏れ（`text-${color}` 問題）
@@ -311,6 +347,7 @@
 - 27.5 デザイントークンを無視した直値の散乱
 - 27.6 既存 CSS との二重管理
 - 27.7 アンチパターンの矯正手順
+- 27.8 AI 生成 Tailwind のよくある崩れ方（任意値の乱用、`bg-blue-500`/`p-4` などトークン無視の直値選択、`text-${color}` 系の検出漏れ、レスポンシブ・a11y の欠落）とレビュー観点
 - ◎ docs（Detecting classes の注意）/ ○ 公式 FAQ・GitHub Discussions
 
 ## 第28章 Tailwind CSS への批判と評価
@@ -329,6 +366,8 @@
 # 第8部 Tailwind CSS の未来
 
 ## 第29章 Tailwind v4
+**ねらい:** v4 が何をどう変えたのかを内部の仕組みごと理解し、v3 からの移行を実務でこなせるようにする。
+
 - 29.1 v4 が目指したもの（速度・モダン CSS・設定の簡素化）
 - 29.2 新エンジン（Oxide / Lightning CSS）の内部
 - 29.3 CSS ファースト設定への全面移行（`@theme`）
@@ -338,14 +377,19 @@
 - ◎ v4.0 Blog / docs: Upgrade guide
 
 ## 第30章 Utility First の未来
+**ねらい:** Atomic CSS の潮流とネイティブ CSS の進化、そして AI による UI 生成の中で Tailwind の立ち位置を見通す。
+
 - 30.1 Atomic CSS の歴史的潮流における Tailwind の位置
 - 30.2 ネイティブ CSS の進化（cascade layers・container queries・`@property`）との関係
 - 30.3 他ツールへの影響（UnoCSS・各種 utility 系）
 - 30.4 デザインツール → コード（Tailwind 前提の UI 生成）の潮流
 - 30.5 「フレームワークが薄くなる」未来像
-- ◎ v4.0 Blog / ○ MDN（モダン CSS）/ ○ 関連プロジェクト
+- 30.6 AI UI 生成と Tailwind（なぜ ChatGPT / Cursor / Copilot は Tailwind を出力しやすいのか — クラスがそのまま見た目で学習データも豊富。Figma / v0 / shadcn/ui 的な「生成 → 取り込み」の流れと、コピーで終わらせず自分のテーマ・コンポーネント設計へ取り込む考え方。shadcn/ui の「所有するコンポーネント」思想との接続）
+- ◎ v4.0 Blog / ○ MDN（モダン CSS）/ ○ shadcn/ui・v0 等の一次資料
 
 ## 第31章 Tailwind CSS を選ぶべきか
+**ねらい:** プロジェクトの条件に応じた採用判断の軸を整理し、読者が自分の現場で結論を出せるようにする。
+
 - 31.1 採用判断のチェックリスト（チーム・規模・寿命・デザインの安定度）
 - 31.2 Rails プロジェクトでの判断軸
 - 31.3 React/Next プロジェクトでの判断軸
@@ -371,6 +415,16 @@
 
 ## 付録D 用語集
 - Utility First / バリアント / 任意の値 / `@theme` / `@apply` / `@utility` / JIT / Oxide / cascade layers / container query / デザイントークン ほか
+
+## 付録E AI に Tailwind コードを依頼するときのプロンプト集
+**ねらい:** 第26・27・30章の内容を、すぐ使える実用的なプロンプト例に落とす。
+
+- E.1 良い依頼の型: 「`@theme` の既存テーマ変数・コンポーネント規約に従って」と前提を渡す（"カードを作って" との違い）
+- E.2 出力形式の明示: Rails ERB / ViewComponent / React(tsx) / Vue など、どの形で返すかを指定する
+- E.3 制約の指定: 動的クラス生成（`text-${color}`）を避ける、任意値より theme トークンを使う、レスポンシブと a11y を満たす
+- E.4 そのまま使えるプロンプト例（新規 UI 生成 / 既存コンポーネントの改修 / リファクタリング）
+- E.5 レビュー用チェックリスト（クラスが実在するか・レスポンシブ破綻・a11y 低下・色/余白/角丸/影がトークン準拠・検出漏れパターン）
+- ◎ docs: Theme / Detecting classes / ○ shadcn/ui
 
 ---
 
