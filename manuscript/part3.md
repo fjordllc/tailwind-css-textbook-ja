@@ -266,7 +266,7 @@ bundle add tailwindcss-rails
 ./bin/rails tailwindcss:install
 ```
 
-`tailwindcss:install` を実行すると、必要なファイルが自動で用意されます。具体的には、入力 CSS（後述の `app/assets/tailwind/application.css`）が作られ、レイアウトに生成済み CSS を読み込む `stylesheet_link_tag` が追加され、開発用の `Procfile.dev` などが整います。
+`tailwindcss:install` を実行すると、必要なファイルが自動で用意されます。具体的には、入力 CSS（後述の `app/assets/tailwind/application.css`）が作られ、レイアウトで生成済み CSS を読み込めるように読み込み設定が必要に応じて整えられ（既定レイアウトにすでに読み込みがある場合はそのまま使われます）、開発用の `Procfile.dev` などが用意されます。
 
 > 新規作成の段階で決めるなら、`rails new my-project --css tailwind` のように `--css tailwind` を付けると、最初から Tailwind 入りのアプリが作られます。
 
@@ -332,14 +332,14 @@ Rails には CSS の扱い方が複数あり、ここも混乱の元なので関
 
 **もう 1 つの選択肢: `cssbundling-rails`**
 
-`tailwindcss-rails` とは別に、**`cssbundling-rails`** という gem を使う道もあります。これは Node.js を使い、esbuild や Vite などの JavaScript ツールで CSS をバンドルする方式です。
+`tailwindcss-rails` とは別に、**`cssbundling-rails`** という gem を使う道もあります。これは **Node.js と `package.json` を使い**、Tailwind・PostCSS・Dart Sass・Bootstrap・Bulma といった CSS 処理を `yarn build:css` で実行して、`app/assets/builds/application.css` に出力する方式です（JavaScript のバンドルを担う `jsbundling-rails` とは別物で、こちらは CSS 専用です）。
 
 両者の使い分けの目安は次のとおりです。
 
 | | `tailwindcss-rails` | `cssbundling-rails` |
 | --- | --- | --- |
-| Node.js | **不要** | 必要 |
-| 仕組み | スタンドアロン実行ファイル | esbuild / Vite などでバンドル |
+| Node.js / package.json | **不要** | 必要 |
+| 仕組み | スタンドアロン実行ファイル | `yarn build:css` で CSS を処理 |
 | 向いているケース | Tailwind だけ使えればよい。構成をシンプルにしたい | すでに Node ベースの JS ビルドがあり、CSS も同じ流れに乗せたい |
 
 **多くの Rails プロジェクトでは、Node 不要でシンプルな `tailwindcss-rails` が第一候補**です。フロントエンドを JavaScript ツールで本格的にバンドルしている場合に限り、`cssbundling-rails` を検討する、という順序がおすすめです。
