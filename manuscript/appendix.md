@@ -19,7 +19,7 @@
 
 ## 効率的な引き方
 
-- **検索を使う**: docs 上部の検索（多くの環境で `/` キー）が最速です。プロパティ名（`gap`・`grid-template-columns`）でもクラス名でも引けます。
+- **検索を使う**: docs 上部の検索（`⌘K` / `Ctrl K`）が最速です。プロパティ名（`gap`・`grid-template-columns`）でもクラス名でも引けます。
 - **各ページの「Quick reference」表**: 各ユーティリティのページ冒頭に、クラスと生成 CSS の対応表があります。値を確認したいときはここを見ます。
 - **バージョンに注意**: 本書は v4 前提です。古い記事や v3 の docs を見ていないか、URL とバージョン表記を確認しましょう。
 - **Playground と Upgrade guide**: 挙動を試すなら **Tailwind Play**（https://play.tailwindcss.com/）、移行するなら **Upgrade guide**（https://tailwindcss.com/docs/upgrade-guide）。
@@ -126,7 +126,10 @@
 | `tailwind.config.js` | `@theme`（CSS） |
 | `!bg-red-500` | `bg-red-500!` |
 | `shadow-sm` / `shadow` | `shadow-xs` / `shadow-sm` |
+| `rounded-sm` | `rounded-xs` |
+| `ring`（3px） | `ring-3`（既定は 1px） |
 | `outline-none` | `outline-hidden` |
+| 既定のボーダー色 `gray-200` | `currentColor` |
 
 ---
 
@@ -169,7 +172,7 @@
 
 > 悪い例:「Tailwind でカードコンポーネントを作って」
 >
-> 良い例:「Tailwind v4 でカードを作ってください。**色は既存のテーマトークン（`bg-surface` `text-foreground` `border-border`）だけを使い**、独自の `bg-gray-*` や任意の値（`[...]`）は使わないでください。余白は spacing スケール（`p-4` `p-6` など）に従ってください。」
+> 良い例:「Tailwind v4 でカードを作ってください。**色は既存のデザイントークン（`bg-surface` `text-foreground` `border-border`）だけを使い**、独自の `bg-gray-*` や任意の値（`[...]`）は使わないでください。余白は spacing スケール（`p-4` `p-6` など）に従ってください。」
 
 ## E.2 出力形式の明示
 
@@ -181,13 +184,13 @@ Rails なら「**ERB の部分テンプレート**で」「**ViewComponent** で
 
 > 「次の制約を守ってください。
 > - クラス名は**完全な文字列**で書く（`bg-${color}` のような動的生成は禁止）。
-> - 色・余白は**テーマトークン**を使い、任意の値（`[...]`）は避ける。
+> - 色・余白は**デザイントークン**を使い、任意の値（`[...]`）は避ける。
 > - **レスポンシブ**（`sm:` `md:`）と**アクセシビリティ**（`aria-*`、`focus-visible:`、適切な HTML 要素）を考慮する。」
 
 ## E.4 そのまま使えるプロンプト例
 
 **新規 UI 生成**:
-> 「Tailwind v4 ＋ React(tsx) で、通知カードのコンポーネントを作ってください。テーマトークン（`bg-surface` `text-foreground` `text-muted`）のみ使用。タイトル・本文・閉じるボタンを持ち、閉じるボタンには `aria-label` と `focus-visible:` のリングを付けてください。動的クラス名と任意の値は使わないこと。」
+> 「Tailwind v4 ＋ React(tsx) で、通知カードのコンポーネントを作ってください。デザイントークン（`bg-surface` `text-foreground` `text-muted`）のみ使用。タイトル・本文・閉じるボタンを持ち、閉じるボタンには `aria-label` と `focus-visible:` のリングを付けてください。動的クラス名と任意の値は使わないこと。」
 
 **既存コンポーネントの改修**:
 > 「次のコンポーネントを、**ダークモード対応**にしてください。`dark:` を直接ベタ書きするのではなく、セマンティックトークン（`bg-surface` など）で表現する方針です。アクセシビリティとレスポンシブは崩さないでください。\n\n（ここにコードを貼る）」
