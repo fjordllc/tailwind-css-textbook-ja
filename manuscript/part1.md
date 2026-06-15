@@ -440,3 +440,13 @@ Tailwind に最もよく向けられる批判が、「**クラスが大量に並
 * Adam Wathan「CSS Utility Classes and "Separation of Concerns"」（2017）: https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
 * Tailwind CSS Docs — Theme（制約・デザイントークン）: https://tailwindcss.com/docs/theme
 * Tailwind CSS v4.0（思想と最新動向）: https://tailwindcss.com/blog/tailwindcss-v4
+
+---
+
+## 演習（第1部）
+
+手を動かす前に、まず「なぜ」を自分の言葉にできるか確認しましょう。
+
+1. **説明してみよう**: 「素の CSS が大規模化で壊れる 3 つの理由」を、人に説明するつもりで 3 行で書き出してください（ヒント: §1.3）。
+2. **考えてみよう**: Adam Wathan の言う「依存の向きを反転させる」とは、`.hero-title` 方式と Tailwind 方式で、HTML と CSS のどちらがどちらに依存しているか、という話でした。あなたの言葉で図にしてみてください（§2.2・§3.4）。
+3. **意見を持とう**: あなたが過去に関わった（または学習した）プロジェクトは、第3章の「Utility First が向く/向かない」のどちらでしたか。理由とともに 1 つ挙げてください。

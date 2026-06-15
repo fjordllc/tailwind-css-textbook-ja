@@ -279,3 +279,13 @@ Tailwind は「あらゆる場面で最善」ではありません。**強みと
 * Tailwind CSS Docs — Styling with utility classes（「インラインスタイルと同じか」への公式の回答）: https://tailwindcss.com/docs/styling-with-utility-classes
 * Adam Wathan「CSS Utility Classes and "Separation of Concerns"」（関心の分離の再定義）: https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
 * BEM 公式（セマンティック CSS 側の思想）: https://getbem.com/introduction/
+
+---
+
+## 演習（第7部）
+
+実務視点は「判断できるか」が問われます。
+
+1. **構成を設計する**: 架空の Rails アプリの CSS エントリ（`application.css`）を、§26.1 の順序（本体 → プラグイン → テーマ → ソース → 自前）で書いてみてください。`@theme` にはセマンティックトークンを 3 つ定義しましょう。
+2. **アンチパターンを診断する**: 次のコードの問題点を第27章の観点で挙げ、直し方を述べてください — `<div className={\`text-${color}-600 p-[13px]\`}>`。
+3. **批判に答える**: 「Tailwind は HTML が汚いから使いたくない」と言う同僚に対し、第28章を踏まえて、**反論だけでなく相手の正当な部分も認めた上で**、どう応答するか書いてみてください。

@@ -438,3 +438,13 @@ Tailwind のユーティリティは見た目を整えるだけで、要素の**
 * MDN — `:focus-visible`: https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
 * W3C — WCAG 2.2 Contrast (Minimum): https://www.w3.org/TR/WCAG22/#contrast-minimum
 * Headless UI（公式サイト）: https://headlessui.com/
+
+---
+
+## 演習（第5部）
+
+実践テーマは「条件付きで見た目を変える」練習が中心です。
+
+1. **ダークモード**: §18.3 の `@custom-variant dark (&:where(.dark, .dark *))` を設定し、`<html>` に `.dark` を付け外しして配色が切り替わるカードを作ってください。さらに、`dark:` をベタ書きする版と、セマンティックトークン（`bg-surface` など）で切り替える版の両方を書き、違いを体感しましょう（§18.5）。
+2. **フォームの状態**: メール入力欄を作り、`focus:` で枠を強調し、`peer` ＋ `peer-invalid:` で不正時にエラーメッセージを表示してください（§20.3）。
+3. **アクセシビリティ点検**: アイコンだけのボタンに `sr-only` でラベルを付け、`focus-visible:` でフォーカスリングを出してください。`outline-none` だけで終わらせていないか確認しましょう（§21.2・§21.3）。
