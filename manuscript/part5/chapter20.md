@@ -13,7 +13,7 @@
 - `strategy: "base"`: グローバルなリセットだけにする（クラスは生成しない）。多くの新規プロジェクトはこれで十分です。
 - `strategy: "class"`: `form-*` クラスを付けた要素にだけリセットを当てる（グローバルには当てない）。既存の見た目を壊したくないとき向け。
 
-導入（v4 では CSS に `@plugin "@tailwindcss/forms";`）は第26章で扱います。
+導入（v4 では CSS に `@plugin "@tailwindcss/forms";`）は[第26章](../part7/chapter26.md)で扱います。
 
 ## 20.2 入力・選択・チェック/ラジオのスタイリング
 
@@ -30,7 +30,7 @@
 
 ## 20.3 状態表現（focus / invalid / disabled / peer）
 
-フォームでは「状態を見た目に反映する」ことが重要です。第6章のバリアントが主役になります。
+フォームでは「状態を見た目に反映する」ことが重要です。[第6章](../part2/chapter6.md)のバリアントが主役になります。
 
 ```html
 <input required
@@ -45,7 +45,7 @@
 - `required:` … 必須項目
 - `disabled:` … 無効化されているとき
 
-さらに第6章で見た `peer-*` を使うと、**入力欄の状態に応じてエラーメッセージを出す**といった連動を、JavaScript なしで書けます。
+さらに[第6章](../part2/chapter6.md)で見た `peer-*` を使うと、**入力欄の状態に応じてエラーメッセージを出す**といった連動を、JavaScript なしで書けます。
 
 ```html
 <input type="email" class="peer ..." />
@@ -75,19 +75,19 @@ Rails の `form_with` なら、ヘルパーに `class:` を渡します。
 <% end %>
 ```
 
-React なら、入力要素に `className` を付けるだけです（第25章で再利用の工夫を扱います）。
+React なら、入力要素に `className` を付けるだけです（[第25章](../part6/chapter25.md)で再利用の工夫を扱います）。
 
 **ここで大切な注意**があります。`@tailwindcss/forms` と Tailwind が面倒を見るのは、あくまで**見た目**だけです。
 
 - **入力の検証（バリデーション）**: 値が正しいかの確認は、Rails のモデルバリデーションやフロントエンドのバリデーションが担います。Tailwind は `invalid:` で「不正なときの見た目」を出せるだけで、何が不正かを判断するのは別の層の仕事です。
-- **アクセシビリティ**: ラベルと入力の関連付け（`<label for>`）、エラーの読み上げ（`aria-describedby` など）は、HTML を正しく書く必要があります（第21章）。`@tailwindcss/forms` はこれらを自動でやってはくれません。
+- **アクセシビリティ**: ラベルと入力の関連付け（`<label for>`）、エラーの読み上げ（`aria-describedby` など）は、HTML を正しく書く必要があります（[第21章](chapter21.md)）。`@tailwindcss/forms` はこれらを自動でやってはくれません。
 
 「フォームの見た目は Tailwind、正しさとアクセシビリティは HTML とアプリ側」という役割分担を、過信せずに押さえておきましょう。
 
 ## 参考資料
 
-* @tailwindcss/forms（GitHub）: https://github.com/tailwindlabs/tailwindcss-forms
-* Tailwind CSS Docs — Field sizing（`field-sizing-content` / `field-sizing-fixed`）: https://tailwindcss.com/docs/field-sizing
-* Tailwind CSS Docs — Hover, focus & other states（invalid / required / peer）: https://tailwindcss.com/docs/hover-focus-and-other-states
+* [@tailwindcss/forms（GitHub）](https://github.com/tailwindlabs/tailwindcss-forms)
+* [Tailwind CSS Docs — Field sizing（`field-sizing-content` / `field-sizing-fixed`）](https://tailwindcss.com/docs/field-sizing)
+* [Tailwind CSS Docs — Hover, focus & other states（invalid / required / peer）](https://tailwindcss.com/docs/hover-focus-and-other-states)
 
 ---

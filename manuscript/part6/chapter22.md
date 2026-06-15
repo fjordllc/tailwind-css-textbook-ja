@@ -2,7 +2,7 @@
 
 ## 22.1 「重複」をどう捉えるか
 
-まず大前提として、Tailwind における重複は「悪」と決めつけないことが大切です。`p-4`・`bg-white` のようなユーティリティが画面のあちこちに現れるのは、第3章で見たとおり**設計どおり**であって、問題ではありません。生成される CSS は `.p-4` ひとつだけなので、いくら使っても CSS は増えません。
+まず大前提として、Tailwind における重複は「悪」と決めつけないことが大切です。`p-4`・`bg-white` のようなユーティリティが画面のあちこちに現れるのは、[第3章](../part1/chapter3.md)で見たとおり**設計どおり**であって、問題ではありません。生成される CSS は `.p-4` ひとつだけなので、いくら使っても CSS は増えません。
 
 問題になるのは、**「ボタン」「カード」のような意味のあるまとまりが、長いクラス列ごと何度も複製される**ときです。
 
@@ -33,7 +33,7 @@
 
 これを見ると、「HTML がすっきりして最高では？」と思うかもしれません。実際、`@apply` は便利に**見えます**。しかし、ここには大きな落とし穴があります。
 
-`@apply` で `.btn-primary` を作るということは、**第1章で見た「セマンティックなクラス名を作る世界」に逆戻りしている**ということです。考えてみてください。
+`@apply` で `.btn-primary` を作るということは、**[第1章](../part1/chapter1.md)で見た「セマンティックなクラス名を作る世界」に逆戻りしている**ということです。考えてみてください。
 
 - `.btn-primary` という**名前を考える**必要が再び生まれる（命名コストの復活）。
 - このクラスは CSS ファイルに存在するので、**CSS が再び増えていく**（線形に増えない、という利点の放棄）。
@@ -101,7 +101,7 @@ function Button({ children }: { children: React.ReactNode }) {
 - **コンポーネント（ボタン、カードなど意味のあるまとまり）** → テンプレート/コンポーネントに抽出する（`@apply` で CSS クラスにしない）。
 - **本当に汎用的な、単機能の拡張** → v4 の `@utility` でカスタムユーティリティとして定義してよい。
 
-`@utility` は、Tailwind の流儀に沿った「新しいユーティリティを 1 つ足す」仕組みです（第2部・第26章）。
+`@utility` は、Tailwind の流儀に沿った「新しいユーティリティを 1 つ足す」仕組みです（第2部・[第26章](../part7/chapter26.md)）。
 
 ```css
 @utility content-auto {
@@ -113,7 +113,7 @@ function Button({ children }: { children: React.ReactNode }) {
 
 ## 参考資料
 
-* Tailwind CSS Docs — Styling with utility classes（Managing duplication / Avoiding @apply）: https://tailwindcss.com/docs/styling-with-utility-classes
-* Tailwind CSS Docs — Functions and directives（@apply / @utility）: https://tailwindcss.com/docs/functions-and-directives
+* [Tailwind CSS Docs — Styling with utility classes（Managing duplication / Avoiding @apply）](https://tailwindcss.com/docs/styling-with-utility-classes)
+* [Tailwind CSS Docs — Functions and directives（@apply / @utility）](https://tailwindcss.com/docs/functions-and-directives)
 
 ---

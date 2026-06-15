@@ -2,7 +2,7 @@
 
 ## 18.1 `dark:` バリアントの仕組み
 
-ダークモードは、`dark:` バリアントで実現します。第6章で見たとおり、これは「ダークモードのときだけ効くスタイル」を生成するバリアントです。
+ダークモードは、`dark:` バリアントで実現します。[第6章](../part2/chapter6.md)で見たとおり、これは「ダークモードのときだけ効くスタイル」を生成するバリアントです。
 
 ```html
 <div class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
@@ -10,7 +10,7 @@
 </div>
 ```
 
-無印（`bg-white text-gray-900`）がライトモードの見た目、`dark:` 付きがダークモードでの上書きです。第17章のモバイルファーストと同じ「土台＋上書き」の構造です。
+無印（`bg-white text-gray-900`）がライトモードの見た目、`dark:` 付きがダークモードでの上書きです。[第17章](chapter17.md)のモバイルファーストと同じ「土台＋上書き」の構造です。
 
 ## 18.2 `media`（OS 連動）と `class`/`selector`（手動切替）戦略
 
@@ -23,7 +23,7 @@
 
 ## 18.3 v4 でのダークモード設定（`@custom-variant dark`）
 
-手動切替にするには、第6章で触れた `@custom-variant` を使って `dark:` の意味を上書きします。v4 では CSS にこう書きます。
+手動切替にするには、[第6章](../part2/chapter6.md)で触れた `@custom-variant` を使って `dark:` の意味を上書きします。v4 では CSS にこう書きます。
 
 ```css
 @import "tailwindcss";
@@ -63,9 +63,9 @@ document.documentElement.classList.toggle('dark')
 
 ## 18.5 実務: 色設計をダークモード前提にする
 
-ダークモード対応で苦労しないコツは、第12章でも触れたとおり、**最初からセマンティックトークンで色を組む**ことです。
+ダークモード対応で苦労しないコツは、[第12章](../part4/chapter12.md)でも触れたとおり、**最初からセマンティックトークンで色を組む**ことです。
 
-`dark:` を要素ごとにベタ書きすると、`bg-white dark:bg-gray-900` のような対が画面中に散らばり、後で色を調整するのが地獄になります。代わりに、第5章のテーマ変数を使い、`.dark` のときに変数の値だけを差し替える設計にします。
+`dark:` を要素ごとにベタ書きすると、`bg-white dark:bg-gray-900` のような対が画面中に散らばり、後で色を調整するのが地獄になります。代わりに、[第5章](../part2/chapter5.md)のテーマ変数を使い、`.dark` のときに変数の値だけを差し替える設計にします。
 
 ```css
 @theme {
@@ -83,7 +83,7 @@ document.documentElement.classList.toggle('dark')
 
 ## 参考資料
 
-* Tailwind CSS Docs — Dark mode: https://tailwindcss.com/docs/dark-mode
-* Tailwind CSS Docs — Functions and directives（@custom-variant）: https://tailwindcss.com/docs/functions-and-directives
+* [Tailwind CSS Docs — Dark mode](https://tailwindcss.com/docs/dark-mode)
+* [Tailwind CSS Docs — Functions and directives（@custom-variant）](https://tailwindcss.com/docs/functions-and-directives)
 
 ---

@@ -57,8 +57,8 @@
 
 ## 6. 確認済みの基準 URL（全章で再利用）
 
-- ユーティリティファースト: https://tailwindcss.com/docs/styling-with-utility-classes
-- テーマ: https://tailwindcss.com/docs/theme
-- v4.0 リリース告知: https://tailwindcss.com/blog/tailwindcss-v4
-- 公式ドキュメント: https://tailwindcss.com/docs
-- GitHub: https://github.com/tailwindlabs/tailwindcss
+- [ユーティリティファースト](https://tailwindcss.com/docs/styling-with-utility-classes)
+- [テーマ](https://tailwindcss.com/docs/theme)
+- [v4.0 リリース告知](https://tailwindcss.com/blog/tailwindcss-v4)
+- [公式ドキュメント](https://tailwindcss.com/docs)
+- [GitHub](https://github.com/tailwindlabs/tailwindcss)

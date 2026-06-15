@@ -10,7 +10,7 @@
 ```
 
 - 幅: `border`（1px）・`border-2`・`border-4`、方向別に `border-t`・`border-x` など
-- 色: `border-*`（パレット。第12章）
+- 色: `border-*`（パレット。[第12章](chapter12.md)）
 - スタイル: `border-solid`・`border-dashed`・`border-dotted`
 
 > v4 の注意: v3 では `border` だけ書くと色が既定でグレーになっていましたが、v4 では既定のボーダー色が `currentColor`（その要素の文字色）に変わりました。意図した色にするには `border-gray-200` のように色を明示します。
@@ -68,15 +68,15 @@ v4 では内側に影や輪を入れる `inset-shadow-*`・`inset-ring-*` も加
 
 ## 13.6 実務: 立体感とフォーカスリング
 
-実務でのコツは 2 つです。1 つは**影を盛りすぎない**こと。`shadow-sm`〜`shadow-md` を基準にし、`shadow-2xl` は本当に浮かせたい要素だけに使うと、画面が落ち着きます。もう 1 つは、**フォーカスリングを消さない**こと。デザイン上の理由で `outline-none` にする場合は、必ず `focus:ring-2` などで代わりの可視化を用意します。これはアクセシビリティの必須事項です（第21章）。
+実務でのコツは 2 つです。1 つは**影を盛りすぎない**こと。`shadow-sm`〜`shadow-md` を基準にし、`shadow-2xl` は本当に浮かせたい要素だけに使うと、画面が落ち着きます。もう 1 つは、**フォーカスリングを消さない**こと。デザイン上の理由で `outline-none` にする場合は、必ず `focus:ring-2` などで代わりの可視化を用意します。これはアクセシビリティの必須事項です（[第21章](../part5/chapter21.md)）。
 
 ## 参考資料
 
-* Tailwind CSS Docs — Border width / color: https://tailwindcss.com/docs/border-width
-* Tailwind CSS Docs — Box shadow: https://tailwindcss.com/docs/box-shadow
-* Tailwind CSS Docs — Filter（filter プロパティ本体）: https://tailwindcss.com/docs/filter
-* Tailwind CSS Docs — blur（`blur-*`）: https://tailwindcss.com/docs/filter-blur
-* Tailwind CSS Docs — brightness（`brightness-*`）: https://tailwindcss.com/docs/filter-brightness
-* Tailwind CSS Docs — backdrop-blur（`backdrop-blur-*`）: https://tailwindcss.com/docs/backdrop-filter-blur
+* [Tailwind CSS Docs — Border width / color](https://tailwindcss.com/docs/border-width)
+* [Tailwind CSS Docs — Box shadow](https://tailwindcss.com/docs/box-shadow)
+* [Tailwind CSS Docs — Filter（filter プロパティ本体）](https://tailwindcss.com/docs/filter)
+* [Tailwind CSS Docs — blur（`blur-*`）](https://tailwindcss.com/docs/filter-blur)
+* [Tailwind CSS Docs — brightness（`brightness-*`）](https://tailwindcss.com/docs/filter-brightness)
+* [Tailwind CSS Docs — backdrop-blur（`backdrop-blur-*`）](https://tailwindcss.com/docs/backdrop-filter-blur)
 
 ---

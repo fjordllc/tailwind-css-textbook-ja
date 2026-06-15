@@ -52,7 +52,7 @@ CSS はこの問題を解決するために生まれました。CSS の理想は
 
 たしかにファイルは分かれています。しかし `hero-title` というクラス名は、HTML 側にも CSS 側にも書かれていて、**両者は名前で固く結びついています**。HTML を見れば「`hero-title` という CSS があるはずだ」と分かり、CSS を見れば「`hero-title` という HTML 要素があるはずだ」と分かる。つまり、ファイルは別でも、**お互いがお互いを知っている**のです。
 
-これは本当に「分離」と呼べるのでしょうか。後ほど第3章で詳しく扱いますが、この「ファイルは分かれているのに依存し合っている」という違和感が、のちに Tailwind CSS が生まれる思想的な出発点になります。ここでは「関心の分離は理想として語られたが、現実には HTML と CSS は名前を介して強く結びついていた」という事実を覚えておいてください。
+これは本当に「分離」と呼べるのでしょうか。後ほど[第3章](chapter3.md)で詳しく扱いますが、この「ファイルは分かれているのに依存し合っている」という違和感が、のちに Tailwind CSS が生まれる思想的な出発点になります。ここでは「関心の分離は理想として語られたが、現実には HTML と CSS は名前を介して強く結びついていた」という事実を覚えておいてください。
 
 ## 1.3 CSS が大規模化で壊れる理由
 
@@ -136,7 +136,7 @@ CSS-in-JS は、CSS のグローバルスコープ問題を解決しました。
 - **Tachyons**（2014 年ごろ）: 「ブラウザの中でデザインするための、関数型 CSS ツールキット」を掲げ、小さな単機能クラスを組み合わせてデザインする手法を確立しました。Tachyons 自身が「これは単なる CSS フレームワークではなくデザインシステムだ」と述べている点は重要です。後の Tailwind の思想を先取りしています。
 - **Basscss**・**Atomic CSS（Yahoo! の ACSS）** など、同時期に複数の試みがありました。
 
-このアプローチは、当時「インラインスタイルと同じではないか」「HTML が汚い」と強い批判を浴びました（この批判は今も Tailwind に向けられ続けています。第28章で正面から扱います）。しかし同時に、**「部品ごとに CSS を書かないので、CSS がほとんど増えない」「クラスを組み合わせるだけなので命名で悩まない」**という、BEM や CSS-in-JS が解決できなかった問題への明確な答えでもありました。
+このアプローチは、当時「インラインスタイルと同じではないか」「HTML が汚い」と強い批判を浴びました（この批判は今も Tailwind に向けられ続けています。[第28章](../part7/chapter28.md)で正面から扱います）。しかし同時に、**「部品ごとに CSS を書かないので、CSS がほとんど増えない」「クラスを組み合わせるだけなので命名で悩まない」**という、BEM や CSS-in-JS が解決できなかった問題への明確な答えでもありました。
 
 ## 1.7 この歴史の上に Tailwind CSS がどう位置づくか
 
@@ -152,19 +152,19 @@ CSS-in-JS は、CSS のグローバルスコープ問題を解決しました。
 Tailwind CSS は、この一番下の **Atomic / Functional CSS の系譜**に位置します。ただし Tailwind が画期的だったのは、思想を発明したことではありません。Tachyons などの先行者がすでに示していた「ユーティリティを組み合わせる」という考え方に、
 
 - **制約のある統一されたデザインシステム**（余白・色・サイズがあらかじめ整ったスケールになっている）
-- **必要なクラスだけを自動生成する仕組み**（HTML が汚い以前に、まず巨大な CSS にならない工夫。第4章で扱います）
+- **必要なクラスだけを自動生成する仕組み**（HTML が汚い以前に、まず巨大な CSS にならない工夫。[第4章](../part2/chapter4.md)で扱います）
 - **優れた開発体験**（エディタ補完、レスポンシブやホバーへの対応）
 
 を組み合わせ、**実務で本当に使える完成度**にまで仕上げた点にあります。
 
-次の第2章では、この Tailwind を作った人物 Adam Wathan が、まさにここで挙げた課題のどれに困り、何を考えて Tailwind を生み出したのかを、本人の言葉（一次情報）から追っていきます。
+次の[第2章](chapter2.md)では、この Tailwind を作った人物 Adam Wathan が、まさにここで挙げた課題のどれに困り、何を考えて Tailwind を生み出したのかを、本人の言葉（一次情報）から追っていきます。
 
 ## 参考資料
 
-* CSS（MDN Web Docs）: https://developer.mozilla.org/ja/docs/Web/CSS
-* BEM 公式 — Introduction: https://getbem.com/introduction/
-* Tachyons（Functional CSS Toolkit）: https://tachyons.io/
-* Adam Wathan「CSS Utility Classes and "Separation of Concerns"」（2017）: https://adamwathan.me/css-utility-classes-and-separation-of-concerns/
-* Tailwind CSS Docs — Styling with utility classes: https://tailwindcss.com/docs/styling-with-utility-classes
+* [CSS（MDN Web Docs）](https://developer.mozilla.org/ja/docs/Web/CSS)
+* [BEM 公式 — Introduction](https://getbem.com/introduction/)
+* [Tachyons（Functional CSS Toolkit）](https://tachyons.io/)
+* [Adam Wathan「CSS Utility Classes and "Separation of Concerns"」（2017）](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
+* [Tailwind CSS Docs — Styling with utility classes](https://tailwindcss.com/docs/styling-with-utility-classes)
 
 ---

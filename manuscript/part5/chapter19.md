@@ -44,7 +44,7 @@ v4 では、これらが個別の CSS プロパティ（`translate`・`scale`・
 - `animate-pulse` … ゆっくり点滅（読み込み中のプレースホルダー）
 - `animate-bounce` … 跳ねる
 
-独自のアニメーションは、第5章のテーマで `--animate-*` を定義して追加します。`@theme` に `@keyframes` とあわせて定義することで、`animate-自分の名前` が使えるようになります。
+独自のアニメーションは、[第5章](../part2/chapter5.md)のテーマで `--animate-*` を定義して追加します。`@theme` に `@keyframes` とあわせて定義することで、`animate-自分の名前` が使えるようになります。
 
 ## 19.4 入場アニメーション `@starting-style`
 
@@ -73,7 +73,7 @@ Tailwind では `motion-reduce:` バリアントで対応します。
 </div>
 ```
 
-`motion-reduce:animate-none` で、reduce motion を有効にしているユーザーには動きを止めます。逆に `motion-safe:`（動きを許可している人にだけ animate を付ける）という書き方もあります。**装飾的なアニメーションには、原則この配慮をセットにする**習慣をつけましょう（第21章）。
+`motion-reduce:animate-none` で、reduce motion を有効にしているユーザーには動きを止めます。逆に `motion-safe:`（動きを許可している人にだけ animate を付ける）という書き方もあります。**装飾的なアニメーションには、原則この配慮をセットにする**習慣をつけましょう（[第21章](chapter21.md)）。
 
 ## 19.6 実務: マイクロインタラクションと過剰演出の回避
 
@@ -83,11 +83,11 @@ Tailwind では `motion-reduce:` バリアントで対応します。
 
 ## 参考資料
 
-* Tailwind CSS Docs — Transition property: https://tailwindcss.com/docs/transition-property
-* Tailwind CSS Docs — Translate: https://tailwindcss.com/docs/translate
-* Tailwind CSS Docs — Scale: https://tailwindcss.com/docs/scale
-* Tailwind CSS Docs — Rotate: https://tailwindcss.com/docs/rotate
-* Tailwind CSS Docs — Animation: https://tailwindcss.com/docs/animation
-* Tailwind CSS Docs — Hover, focus & other states（starting / motion-reduce）: https://tailwindcss.com/docs/hover-focus-and-other-states
+* [Tailwind CSS Docs — Transition property](https://tailwindcss.com/docs/transition-property)
+* [Tailwind CSS Docs — Translate](https://tailwindcss.com/docs/translate)
+* [Tailwind CSS Docs — Scale](https://tailwindcss.com/docs/scale)
+* [Tailwind CSS Docs — Rotate](https://tailwindcss.com/docs/rotate)
+* [Tailwind CSS Docs — Animation](https://tailwindcss.com/docs/animation)
+* [Tailwind CSS Docs — Hover, focus & other states（starting / motion-reduce）](https://tailwindcss.com/docs/hover-focus-and-other-states)
 
 ---

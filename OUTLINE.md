@@ -405,7 +405,7 @@
 ## 付録A 公式ドキュメントの歩き方
 - docs の構成（Core concepts / Base styles / Layout / … / Customization）
 - 検索の使い方、バージョン切替、Playground と Upgrade guide の場所
-- ◎ https://tailwindcss.com/docs
+- ◎ <https://tailwindcss.com/docs>
 
 ## 付録B よく使う Utility 一覧
 - カテゴリ別（Spacing / Sizing / Typography / Color / Flex / Grid / Border / Effects / States）に頻出クラスを厳選
