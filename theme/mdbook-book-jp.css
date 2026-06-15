@@ -1,6 +1,6 @@
 @import "./mdbook-book-core.css";
 
-html {
+html:lang(ja) {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -11,11 +11,24 @@ html {
     "Noto Sans JP",
     "Meiryo",
     sans-serif;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "palt" 1;
+  font-variant-east-asian: proportional-width;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 body {
   letter-spacing: 0;
   line-height: 1.8;
+}
+
+@supports (text-spacing: trim-start) {
+  html:lang(ja) {
+    text-spacing: trim-start allow-end;
+  }
 }
 
 .sidebar .menu-title {
@@ -35,6 +48,7 @@ body {
 .content li {
   font-weight: 400;
   line-height: 1.95;
+  text-wrap: pretty;
 }
 
 .content p {
@@ -133,6 +147,8 @@ body {
   padding: 1.05em 1.15em;
   line-height: 1.7;
   overflow-x: auto;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .content pre code {
