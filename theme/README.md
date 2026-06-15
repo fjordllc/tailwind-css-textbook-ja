@@ -10,4 +10,8 @@
 3. 各書籍の `theme/*.css` で色・余白・見出しサイズなどの変数を上書きする
 
 このリポジトリでは `tailwind-css-textbook.css` が薄いラッパーになっています。
-将来 `mdbook-book-jp` を別リポジトリとして配るときも、この 2 層をそのまま移せます。
+
+`mdbook-book-core.css` と `mdbook-book-jp.css` は、別リポジトリのテーマ
+[mdbook-book-jp](https://github.com/machida/mdbook-book-jp) から `install.sh` で導入したコピーです。
+直接編集せず（編集してもテーマ更新で上書きされます）、本書固有の調整はラッパー
+`tailwind-css-textbook.css` に書いてください。テーマ自体の改善は mdbook-book-jp 側で行います。
