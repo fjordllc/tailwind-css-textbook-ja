@@ -1,5 +1,7 @@
 # はじめに
 
+本書は、プログラミングスクール **[FjordBootCamp（フィヨルドブートキャンプ）](https://bootcamp.fjord.jp/)** の教材として作成された、Tailwind CSS の教科書です。
+
 本書は、Tailwind CSS のクラス一覧ではありません。
 
 目的は、Tailwind CSS を「便利な短縮記法」として覚えることではなく、**なぜ Tailwind CSS のような道具が生まれ、どんな問題を解決し、どこに限界があるのか**を理解することです。

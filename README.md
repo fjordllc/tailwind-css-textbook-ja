@@ -2,6 +2,8 @@
 
 このリポジトリは、**Tailwind CSS の日本語の教科書を書くためのプロジェクト**です。完成した本のソース原稿と、それを書くための設計資料（目次・執筆ルール）が入っています。
 
+本書は、プログラミングスクール **[FjordBootCamp（フィヨルドブートキャンプ）](https://bootcamp.fjord.jp/)** の教材として作成しています。
+
 ## このプロジェクトは何か
 
 Tailwind CSS の「クラス一覧（リファレンス）」ではありません。次のことを読者が理解できる、**読み物としての教科書**を目指しています。
@@ -112,6 +114,16 @@ git clone https://github.com/machida/mdbook-book-jp.git
 ```
 
 `install.sh` は `theme/` へ CSS を配置し、`book.toml` に `language = "ja"` と `additional-css` を追加します。テーマ自体の改善（共通レイアウトや日本語組版の調整）は mdbook-book-jp 側で行い、各書籍はその成果を取り込むだけにします。
+
+## FjordBootCamp について
+
+本書は、プログラミングスクール **[FjordBootCamp（フィヨルドブートキャンプ）](https://bootcamp.fjord.jp/)** の教材として作成されました。
+
+FjordBootCamp は、現役のソフトウェアエンジニアが運営する日本語のオンラインプログラミングスクールです。未経験からでも学べるカリキュラムで、**Rails エンジニアコース**（Ruby on Rails によるバックエンド／フロントエンド開発）と**フロントエンドエンジニアコース**（HTML / CSS / JavaScript・TypeScript）を提供しています。暗記ではなく「自分で考えて学び続ける力」を養うことを重視し、受講生は自分で設計・公開する成果物まで作り上げます。
+
+本書が想定する読者（HTML/CSS と Flexbox/Grid の基礎があり、Rails チュートリアル程度の経験がある初級エンジニア）は、まさに FjordBootCamp が育てる学習者像と重なります。Tailwind CSS をこれから実務で使う人の土台づくりに役立ててください。
+
+- 公式サイト: <https://bootcamp.fjord.jp/>
 
 ## ライセンス
 
