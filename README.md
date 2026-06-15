@@ -97,9 +97,9 @@ mdbook build
 
 ## ライセンス
 
-Copyright (c) 2026 FjordBootCamp
+Copyright (c) 2026 machida
 
-このリポジトリの内容は [MIT License](./LICENSE) で公開します。
+このリポジトリの内容は [MIT License](./LICENSE) で公開します。著作権者のページは [https://github.com/machida](https://github.com/machida) です。
 
 ## 品質方針（執筆の約束ごと）
 
