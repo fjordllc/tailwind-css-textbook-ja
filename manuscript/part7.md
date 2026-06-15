@@ -58,7 +58,7 @@ Tailwind プロジェクトの心臓は、たった 1 つの CSS エントリフ
 | ベースの土台スタイル | `@layer base` | CSS エントリ |
 | 既存の JS プラグイン | `@plugin` | CSS エントリ |
 
-**`@plugin` と公式プラグインについて。** `@tailwindcss/typography`（第11章）や `@tailwindcss/forms`（第20章）は、JavaScript で書かれたプラグインです。v4 では、これらを CSS エントリで `@plugin "..."` と読み込みます。
+**`@plugin` と公式プラグインについて。** `@tailwindcss/typography`（第11章）や `@tailwindcss/forms`（第20章）は、JavaScript で書かれたプラグインです。v4 では、これらを CSS エントリで `@plugin "..."` と読み込みます。`@plugin` は、こうした **JavaScript ベースのプラグインを CSS から読み込むための互換的なディレクティブ**という位置づけです。テーマのカスタマイズ自体は `@theme`（第5章）で CSS だけで完結しますが、既存の JS プラグインを使いたいときに `@plugin` を用います。
 
 ```css
 @import "tailwindcss";
