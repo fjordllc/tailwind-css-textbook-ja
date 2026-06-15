@@ -115,9 +115,11 @@ git clone https://github.com/machida/mdbook-book-jp.git
 
 ## ライセンス
 
-Copyright (c) 2026 machida
+Copyright (c) 2026 FjordBootCamp
 
-このリポジトリの内容は [MIT License](./LICENSE) で公開します。著作権者のページは [https://github.com/machida](https://github.com/machida) です。
+このリポジトリの本文・原稿は [MIT License](./LICENSE) で公開します。著作権者は FjordBootCamp（[https://github.com/fjordllc](https://github.com/fjordllc)）です。
+
+なお、`theme/mdbook-book-core.css` / `theme/mdbook-book-jp.css` は日本語テーマ [mdbook-book-jp](https://github.com/machida/mdbook-book-jp)（Copyright (c) 2026 machida, MIT License）から導入したもので、その著作権は machida に帰属します。
 
 ## 品質方針（執筆の約束ごと）
 
