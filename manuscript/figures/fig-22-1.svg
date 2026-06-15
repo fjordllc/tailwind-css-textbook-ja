@@ -1,75 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
   <title id="title">図 22-1 @apply vs コンポーネント抽出</title>
-  <desc id="desc">同じ長いクラス列への対処として、@apply で CSS に逃がす方法と、コンポーネントに抽出する方法を比較した図。</desc>
+  <desc id="desc">@apply で CSS に逃がす方法と、コンポーネントに抽出する方法を比較した図。</desc>
   <defs>
     <style>
       .bg { fill: #ffffff; }
-      .panel { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; rx: 18; ry: 18; }
-      .left { fill: #fff7f7; stroke: #ef4444; stroke-width: 2; rx: 18; ry: 18; }
-      .right { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; rx: 18; ry: 18; }
-      .head { font: 700 24px sans-serif; fill: #0f172a; }
-      .title { font: 700 30px sans-serif; fill: #0f172a; }
-      .label { font: 700 22px sans-serif; fill: #0369a1; }
-      .warn { font: 700 22px sans-serif; fill: #b91c1c; }
-      .good { font: 700 22px sans-serif; fill: #0369a1; }
-      .text { font: 500 19px sans-serif; fill: #1f2937; }
-      .small { font: 500 18px sans-serif; fill: #475569; }
+      .top { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
+      .left { fill: #fff7f7; stroke: #ef4444; stroke-width: 2; }
+      .right { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
+      .labelBad { font: 700 22px sans-serif; fill: #b91c1c; }
+      .labelGood { font: 700 22px sans-serif; fill: #0369a1; }
+      .text { font: 600 19px sans-serif; fill: #0f172a; }
+      .note { font: 500 17px sans-serif; fill: #475569; }
       .code { font: 600 18px monospace; fill: #0f172a; }
-      .code2 { font: 600 16px monospace; fill: #0f172a; }
-      .line { stroke: #0284c7; stroke-width: 5; fill: none; marker-end: url(#arrow); }
-      .line2 { stroke: #ef4444; stroke-width: 5; fill: none; marker-end: url(#arrowRed); }
-      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; ry: 14; }
-      .badgeBad { fill: #fee2e2; stroke: #ef4444; stroke-width: 2; rx: 999; ry: 999; }
-      .badgeGood { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; rx: 999; ry: 999; }
+      .badgeBad { fill: #fee2e2; stroke: #ef4444; stroke-width: 2; }
+      .badgeGood { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; }
+      .arrowBad { stroke: #ef4444; stroke-width: 5; fill: none; marker-end: url(#arrowRed); }
+      .arrowGood { stroke: #0284c7; stroke-width: 5; fill: none; marker-end: url(#arrowBlue); }
     </style>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7" />
-    </marker>
     <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#ef4444" />
+      <path d="M0,0 L12,6 L0,12 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7"/>
     </marker>
   </defs>
-  <rect class="bg" width="1200" height="620"/>
+  <rect class="bg" width="1200" height="500"/>
 
-  <rect class="panel" x="70" y="40" width="1060" height="100"/>
-  <text class="title" x="100" y="82">重複: 同じ長いクラス列が 3 か所</text>
-  <rect class="box" x="100" y="100" width="980" height="30"/>
-  <text class="code" x="120" y="122">inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700</text>
+  <rect class="top" x="90" y="40" width="1020" height="90" rx="18" ry="18"/>
+  <text class="text" x="120" y="86">重複: 同じ長いクラス列が 3 か所</text>
+  <text class="code" x="120" y="114">inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm ...</text>
 
-  <path class="line2" d="M600 150 L600 185"/>
+  <path class="arrowBad" d="M600 130 L600 170"/>
 
-  <rect class="left" x="70" y="200" width="500" height="360"/>
-  <text class="warn" x="100" y="242">✕ 非推奨: @apply で CSS に逃がす</text>
-  <rect class="box" x="100" y="260" width="420" height="110"/>
-  <text class="code" x="120" y="292">.btn-primary {</text>
-  <text class="code2" x="120" y="324">  @apply ...;</text>
-  <text class="code" x="120" y="356">}</text>
-  <rect class="badgeBad" x="100" y="392" width="138" height="36"/>
-  <text class="text" x="120" y="417">命名コスト復活</text>
-  <rect class="badgeBad" x="248" y="392" width="156" height="36"/>
-  <text class="text" x="270" y="417">CSS が再び増える</text>
-  <rect class="badgeBad" x="100" y="438" width="220" height="36"/>
-  <text class="text" x="120" y="463">HTML↔CSS の往復が戻る</text>
-  <rect class="badgeBad" x="330" y="438" width="150" height="36"/>
-  <text class="text" x="354" y="463">BEM へ逆戻り</text>
+  <rect class="left" x="90" y="190" width="430" height="230" rx="18" ry="18"/>
+  <text class="labelBad" x="120" y="232">✕ 非推奨</text>
+  <text class="text" x="120" y="272">@apply で CSS に逃がす</text>
+  <rect class="badgeBad" x="120" y="300" width="150" height="36" rx="999" ry="999"/>
+  <text class="note" x="145" y="324">命名コスト復活</text>
+  <rect class="badgeBad" x="120" y="346" width="150" height="36" rx="999" ry="999"/>
+  <text class="note" x="145" y="370">CSS が増える</text>
+  <text class="note" x="120" y="414">→ BEM 時代へ逆戻り</text>
 
-  <rect class="right" x="630" y="200" width="500" height="360"/>
-  <text class="good" x="660" y="242">○ 推奨: コンポーネントに抽出</text>
-  <rect class="box" x="660" y="260" width="420" height="110"/>
-  <text class="code" x="680" y="292">&lt;Button&gt; / _button.erb</text>
-  <text class="code2" x="680" y="324">長いクラス列は定義の 1 か所</text>
-  <text class="code" x="680" y="356">props でバリエーション可</text>
-  <rect class="badgeGood" x="660" y="392" width="138" height="36"/>
-  <text class="text" x="680" y="417">命名は最小限</text>
-  <rect class="badgeGood" x="808" y="392" width="138" height="36"/>
-  <text class="text" x="828" y="417">CSS は増えない</text>
-  <rect class="badgeGood" x="956" y="392" width="130" height="36"/>
-  <text class="text" x="976" y="417">利点を保つ</text>
-  <rect class="badgeGood" x="660" y="438" width="250" height="36"/>
-  <text class="text" x="680" y="463">重複はコンポーネントへ畳み込む</text>
-  <rect class="badgeGood" x="920" y="438" width="150" height="36"/>
-  <text class="text" x="944" y="463">Tailwind 維持</text>
+  <rect class="right" x="680" y="190" width="430" height="230" rx="18" ry="18"/>
+  <text class="labelGood" x="710" y="232">○ 推奨</text>
+  <text class="text" x="710" y="272">コンポーネントに抽出</text>
+  <rect class="badgeGood" x="710" y="300" width="170" height="36" rx="999" ry="999"/>
+  <text class="note" x="735" y="324">定義は 1 か所</text>
+  <rect class="badgeGood" x="710" y="346" width="170" height="36" rx="999" ry="999"/>
+  <text class="note" x="735" y="370">CSS は増えない</text>
+  <text class="note" x="710" y="414">→ Tailwind の利点を保つ</text>
 
-  <path class="line2" d="M300 370 C300 390, 290 400, 250 410"/>
-  <path class="line" d="M800 370 C800 390, 810 400, 850 410"/>
+  <path class="arrowBad" d="M300 410 C300 430, 280 438, 245 442"/>
+  <path class="arrowGood" d="M900 410 C900 430, 920 438, 955 442"/>
 </svg>
