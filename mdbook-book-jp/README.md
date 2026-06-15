@@ -19,6 +19,12 @@
 ./bin/install.sh /path/to/your-book
 ```
 
+配布物を作る場合は、リポジトリのルートで次を実行します。
+
+```bash
+./bin/package.sh
+```
+
 スクリプトは次を行います。
 
 - `theme/` に共通 CSS を配置
