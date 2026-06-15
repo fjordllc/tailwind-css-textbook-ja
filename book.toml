@@ -1,0 +1,20 @@
+[book]
+title = "Tailwind CSS 教科書"
+authors = ["Fjord, Inc."]
+language = "ja"
+multilingual = false
+src = "manuscript"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/fjordllc/tailwind-css-textbook-ja"
+edit-url-template = "https://github.com/fjordllc/tailwind-css-textbook-ja/edit/main/{path}"
+additional-css = ["theme/tailwind-css-textbook.css"]
+no-section-label = true
+
+[output.html.search]
+enable = true
+use-boolean-and = true

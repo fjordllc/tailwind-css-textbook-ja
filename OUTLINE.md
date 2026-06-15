@@ -438,6 +438,12 @@
 ## 各部末の演習（やってみよう）
 - 第1〜8部の各末尾に「演習（第N部）」を 1〜3 問配置。各部の学習目標に対応し、自己点検の導線として参照節（§N.M）を併記する。
 
+## Web 書籍化（mdBook）
+- 本文 Markdown は `manuscript/` 配下に置き、`book.toml` で mdBook の `src` として指定する。
+- mdBook 用のナビゲーションは `manuscript/SUMMARY.md` に置く。Web ではページが長くなりすぎないよう、本文は章ごとに 1 ページへ分割する。
+- 各部の導入は `manuscript/part*/index.md`、章本文は `manuscript/part*/chapter*.md`、演習は `manuscript/part*/exercises.md`、付録は `manuscript/appendix/*.md` に置く。原稿と Web 書籍用ファイルは同じ Markdown を使い、二重管理しない。
+- `mdbook build` の生成物は `/book/` に出力し、リポジトリにはコミットしない。
+
 ---
 
 ## 執筆順とマイルストーン
