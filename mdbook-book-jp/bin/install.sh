@@ -27,8 +27,18 @@ import sys
 path = Path(sys.argv[1])
 text = path.read_text(encoding="utf-8")
 needle = "theme/mdbook-book-jp.css"
+language_line = 'language = "ja"'
+
+if language_line not in text:
+    book_header = re.search(r'^\[book\]\s*$', text, re.M)
+    if book_header:
+        insert_at = book_header.end()
+        text = text[:insert_at] + "\n" + language_line + text[insert_at:]
+    else:
+        text = text.rstrip() + '\n\n[book]\n' + language_line + '\n'
 
 if needle in text:
+    path.write_text(text, encoding="utf-8")
     sys.exit(0)
 
 output_header = re.search(r'^\[output\.html\]\s*$', text, re.M)
