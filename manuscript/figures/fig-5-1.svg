@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
   <title id="title">図 5-1 @theme の変数は CSS 変数とユーティリティの両方になる</title>
   <desc id="desc">@theme の 1 つの定義が、CSS 変数とユーティリティクラスの 2 つに分かれる様子を示した図。</desc>
   <defs>
@@ -7,37 +7,37 @@
       .box { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
       .chip { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; }
       .label { font: 700 22px sans-serif; fill: #0369a1; }
-      .text { font: 600 20px sans-serif; fill: #0f172a; }
-      .note { font: 500 17px sans-serif; fill: #475569; }
+      .text { font: 600 19px sans-serif; fill: #0f172a; }
+      .note { font: 500 16px sans-serif; fill: #475569; }
       .code { font: 600 18px monospace; fill: #0f172a; }
-      .arrow { stroke: #0284c7; stroke-width: 5; fill: none; marker-end: url(#arrowhead); }
+      .arrow { stroke: #0284c7; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
     </style>
-    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7"/>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/>
     </marker>
   </defs>
-  <rect class="bg" width="1200" height="500"/>
+  <rect class="bg" width="1200" height="540"/>
 
-  <rect class="box" x="330" y="30" width="540" height="120" rx="18" ry="18"/>
-  <text class="label" x="360" y="72">1 つの定義</text>
-  <rect class="chip" x="360" y="84" width="480" height="42" rx="12" ry="12"/>
-  <text class="code" x="382" y="112">@theme { --color-mint-500: oklch(...); }</text>
+  <rect class="box" x="360" y="30" width="480" height="110" rx="18" ry="18"/>
+  <text class="label" x="390" y="72">1 つの定義</text>
+  <rect class="chip" x="390" y="84" width="420" height="34" rx="10" ry="10"/>
+  <text class="code" x="410" y="107">@theme { --color-mint-500: oklch(...); }</text>
 
-  <path class="arrow" d="M600 150 L600 208"/>
-  <text class="note" x="635" y="200">2 つに分岐</text>
+  <path class="arrow" d="M600 140 L600 186"/>
+  <text class="note" x="625" y="176">2 つに分岐</text>
 
-  <rect class="box" x="70" y="250" width="460" height="180" rx="18" ry="18"/>
-  <text class="label" x="100" y="292">① CSS 変数</text>
-  <rect class="chip" x="100" y="310" width="380" height="70" rx="12" ry="12"/>
-  <text class="code" x="124" y="352">:root { --color-mint-500: ... }</text>
-  <text class="note" x="124" y="389">→ var(--color-mint-500) で使える</text>
+  <rect class="box" x="90" y="240" width="420" height="180" rx="18" ry="18"/>
+  <text class="label" x="120" y="282">① CSS 変数</text>
+  <rect class="chip" x="120" y="300" width="360" height="52" rx="12" ry="12"/>
+  <text class="code" x="145" y="333">:root { --color-mint-500: ... }</text>
+  <text class="note" x="120" y="388">→ var(--color-mint-500) で使える</text>
 
-  <rect class="box" x="670" y="250" width="460" height="180" rx="18" ry="18"/>
-  <text class="label" x="700" y="292">② ユーティリティ</text>
-  <rect class="chip" x="700" y="310" width="380" height="70" rx="12" ry="12"/>
-  <text class="code" x="724" y="352">.bg-mint-500 { ... }</text>
-  <text class="note" x="724" y="389">→ class として使える</text>
+  <rect class="box" x="690" y="240" width="420" height="180" rx="18" ry="18"/>
+  <text class="label" x="720" y="282">② ユーティリティ</text>
+  <rect class="chip" x="720" y="300" width="360" height="52" rx="12" ry="12"/>
+  <text class="code" x="745" y="333">.bg-mint-500 { ... }</text>
+  <text class="note" x="720" y="388">→ class として使える</text>
 
-  <path class="arrow" d="M600 208 C500 235, 420 240, 300 250"/>
-  <path class="arrow" d="M600 208 C700 235, 780 240, 900 250"/>
+  <path class="arrow" d="M600 186 C500 214, 420 222, 300 240"/>
+  <path class="arrow" d="M600 186 C700 214, 780 222, 900 240"/>
 </svg>

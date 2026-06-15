@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
   <title id="title">図 22-1 @apply vs コンポーネント抽出</title>
   <desc id="desc">@apply で CSS に逃がす方法と、コンポーネントに抽出する方法を比較した図。</desc>
   <defs>
@@ -7,49 +7,49 @@
       .top { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
       .left { fill: #fff7f7; stroke: #ef4444; stroke-width: 2; }
       .right { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
-      .labelBad { font: 700 22px sans-serif; fill: #b91c1c; }
-      .labelGood { font: 700 22px sans-serif; fill: #0369a1; }
-      .text { font: 600 19px sans-serif; fill: #0f172a; }
-      .note { font: 500 17px sans-serif; fill: #475569; }
-      .code { font: 600 18px monospace; fill: #0f172a; }
+      .labelBad { font: 700 21px sans-serif; fill: #b91c1c; }
+      .labelGood { font: 700 21px sans-serif; fill: #0369a1; }
+      .text { font: 600 18px sans-serif; fill: #0f172a; }
+      .note { font: 500 16px sans-serif; fill: #475569; }
+      .code { font: 600 17px monospace; fill: #0f172a; }
       .badgeBad { fill: #fee2e2; stroke: #ef4444; stroke-width: 2; }
       .badgeGood { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; }
-      .arrowBad { stroke: #ef4444; stroke-width: 5; fill: none; marker-end: url(#arrowRed); }
-      .arrowGood { stroke: #0284c7; stroke-width: 5; fill: none; marker-end: url(#arrowBlue); }
+      .arrowBad { stroke: #ef4444; stroke-width: 4; fill: none; marker-end: url(#arrowRed); }
+      .arrowGood { stroke: #0284c7; stroke-width: 4; fill: none; marker-end: url(#arrowBlue); }
     </style>
-    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#ef4444"/>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ef4444"/>
     </marker>
-    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7"/>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/>
     </marker>
   </defs>
-  <rect class="bg" width="1200" height="500"/>
+  <rect class="bg" width="1200" height="520"/>
 
-  <rect class="top" x="90" y="40" width="1020" height="90" rx="18" ry="18"/>
-  <text class="text" x="120" y="86">重複: 同じ長いクラス列が 3 か所</text>
-  <text class="code" x="120" y="114">inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm ...</text>
+  <rect class="top" x="90" y="40" width="1020" height="86" rx="18" ry="18"/>
+  <text class="text" x="120" y="79">重複: 同じ長いクラス列が 3 か所</text>
+  <text class="code" x="120" y="107">inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm ...</text>
 
-  <path class="arrowBad" d="M600 130 L600 170"/>
+  <path class="arrowBad" d="M600 126 L600 166"/>
 
-  <rect class="left" x="90" y="190" width="430" height="230" rx="18" ry="18"/>
-  <text class="labelBad" x="120" y="232">✕ 非推奨</text>
-  <text class="text" x="120" y="272">@apply で CSS に逃がす</text>
-  <rect class="badgeBad" x="120" y="300" width="150" height="36" rx="999" ry="999"/>
-  <text class="note" x="145" y="324">命名コスト復活</text>
-  <rect class="badgeBad" x="120" y="346" width="150" height="36" rx="999" ry="999"/>
-  <text class="note" x="145" y="370">CSS が増える</text>
-  <text class="note" x="120" y="414">→ BEM 時代へ逆戻り</text>
+  <rect class="left" x="90" y="186" width="430" height="240" rx="18" ry="18"/>
+  <text class="labelBad" x="120" y="225">✕ 非推奨</text>
+  <text class="text" x="120" y="262">@apply で CSS に逃がす</text>
+  <rect class="badgeBad" x="120" y="294" width="150" height="36" rx="999" ry="999"/>
+  <text class="note" x="145" y="318">命名コスト復活</text>
+  <rect class="badgeBad" x="120" y="340" width="130" height="36" rx="999" ry="999"/>
+  <text class="note" x="145" y="364">CSS が増える</text>
+  <text class="note" x="120" y="408">→ BEM 時代へ逆戻り</text>
 
-  <rect class="right" x="680" y="190" width="430" height="230" rx="18" ry="18"/>
-  <text class="labelGood" x="710" y="232">○ 推奨</text>
-  <text class="text" x="710" y="272">コンポーネントに抽出</text>
-  <rect class="badgeGood" x="710" y="300" width="170" height="36" rx="999" ry="999"/>
-  <text class="note" x="735" y="324">定義は 1 か所</text>
-  <rect class="badgeGood" x="710" y="346" width="170" height="36" rx="999" ry="999"/>
-  <text class="note" x="735" y="370">CSS は増えない</text>
-  <text class="note" x="710" y="414">→ Tailwind の利点を保つ</text>
+  <rect class="right" x="680" y="186" width="430" height="240" rx="18" ry="18"/>
+  <text class="labelGood" x="710" y="225">○ 推奨</text>
+  <text class="text" x="710" y="262">コンポーネントに抽出</text>
+  <rect class="badgeGood" x="710" y="294" width="150" height="36" rx="999" ry="999"/>
+  <text class="note" x="735" y="318">定義は 1 か所</text>
+  <rect class="badgeGood" x="710" y="340" width="150" height="36" rx="999" ry="999"/>
+  <text class="note" x="735" y="364">CSS は増えない</text>
+  <text class="note" x="710" y="408">→ Tailwind の利点を保つ</text>
 
-  <path class="arrowBad" d="M300 410 C300 430, 280 438, 245 442"/>
-  <path class="arrowGood" d="M900 410 C900 430, 920 438, 955 442"/>
+  <path class="arrowBad" d="M300 426 C300 444, 285 452, 255 456"/>
+  <path class="arrowGood" d="M900 426 C900 444, 915 452, 945 456"/>
 </svg>
