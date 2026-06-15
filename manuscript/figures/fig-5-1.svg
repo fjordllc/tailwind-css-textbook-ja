@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">図 5-1 @theme の変数は CSS 変数とユーティリティの両方になる</title>
+  <desc id="desc">@theme で定義した 1 つの変数が、CSS 変数とユーティリティクラスの両方に展開されることを示した分岐図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; rx: 18; ry: 18; }
+      .panel2 { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; ry: 18; }
+      .title { font: 700 30px sans-serif; fill: #0f172a; }
+      .label { font: 700 22px sans-serif; fill: #0369a1; }
+      .text { font: 500 20px sans-serif; fill: #1f2937; }
+      .small { font: 500 18px sans-serif; fill: #475569; }
+      .code { font: 600 20px monospace; fill: #0f172a; }
+      .code2 { font: 600 18px monospace; fill: #0f172a; }
+      .line { stroke: #0284c7; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+      .box { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; rx: 14; ry: 14; }
+      .box2 { fill: #eff6ff; stroke: #0284c7; stroke-width: 2; rx: 14; ry: 14; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7" />
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="620"/>
+
+  <rect class="panel" x="250" y="40" width="700" height="150"/>
+  <text class="label" x="280" y="82">1 つの定義</text>
+  <rect class="box" x="300" y="98" width="600" height="68"/>
+  <text class="code" x="330" y="140">@theme { --color-mint-500: oklch(...); }</text>
+
+  <path class="line" d="M600 190 L600 245"/>
+  <text class="small" x="630" y="230">2 つの役割に分岐</text>
+
+  <rect class="panel2" x="70" y="270" width="470" height="270"/>
+  <text class="label" x="100" y="312">① CSS 変数として公開</text>
+  <rect class="box2" x="110" y="336" width="390" height="132"/>
+  <text class="code" x="135" y="372">:root {</text>
+  <text class="code2" x="135" y="404">  --color-mint-500: oklch(...);</text>
+  <text class="code" x="135" y="436">}</text>
+  <text class="small" x="135" y="468">→ var(--color-mint-500) で使える</text>
+
+  <rect class="panel2" x="660" y="270" width="470" height="270"/>
+  <text class="label" x="690" y="312">② ユーティリティを生成</text>
+  <rect class="box2" x="700" y="336" width="390" height="132"/>
+  <text class="code" x="725" y="370">.bg-mint-500 {</text>
+  <text class="code2" x="725" y="402">  background-color: var(--color-mint-500);</text>
+  <text class="code" x="725" y="434">}</text>
+  <text class="small" x="725" y="466">→ class として使える</text>
+
+  <path class="line" d="M600 245 C500 270, 420 280, 310 290"/>
+  <path class="line" d="M600 245 C700 270, 780 280, 890 290"/>
+</svg>

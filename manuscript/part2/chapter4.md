@@ -12,6 +12,11 @@
 
 この「使うものだけ作る」という発想が、第1部で触れた「CSS が線形に増えない」性質と、本番ビルドが小さい理由を支えています。
 
+<figure>
+<img src="../figures/fig-4-1.svg" alt="Tailwind エンジンがソースファイルを走査し、使われている p-6 や text-center だけを CSS に生成する流れを示した図。">
+<figcaption>図 4-1　Tailwind はソースを走査し、実際に使われているクラスだけを CSS に生成する（JIT）。</figcaption>
+</figure>
+
 ## 4.2 JIT（Just-In-Time）の考え方
 
 この「使われているクラスだけを、その場で生成する」方式を **JIT（Just-In-Time、必要なときに）** と呼びます。
