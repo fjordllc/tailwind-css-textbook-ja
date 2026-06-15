@@ -1,5 +1,7 @@
 # Summary
 
+- [はじめに](preface.md)
+
 - [第1部 Tailwind CSS を理解する](part1/index.md)
   - [第1章 CSS の歴史と Tailwind CSS](part1/chapter1.md)
   - [第2章 Tailwind CSS 誕生の背景](part1/chapter2.md)
@@ -62,4 +64,4 @@
   - [付録D 用語集](appendix/d.md)
   - [付録E AI に Tailwind コードを依頼するときのプロンプト集](appendix/e.md)
   - [付録F ハンズオン: ゼロから動く最小例](appendix/f.md)
-  - [参考資料](appendix/references.md)
+  - [おわりに](appendix/afterword.md)

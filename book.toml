@@ -18,3 +18,7 @@ no-section-label = true
 [output.html.search]
 enable = true
 use-boolean-and = true
+
+[output.html.fold]
+enable = true
+level = 1

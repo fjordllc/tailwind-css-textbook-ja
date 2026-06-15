@@ -94,6 +94,12 @@ mdbook build
 
 この環境では `mdbook v0.4.52` でビルド確認済みです。
 
+## ライセンス
+
+Copyright (c) 2026 FjordBootCamp
+
+このリポジトリの内容は [MIT License](./LICENSE) で公開します。
+
 ## 品質方針（執筆の約束ごと）
 
 - **一次情報を最優先**します（公式ドキュメント・公式ブログ・GitHub・リリースノート・作者 Adam Wathan の発信）。第三者ブログは補助に留めます。
