@@ -98,4 +98,3 @@ v4 では、横方向が `padding-left/right` ではなく **`padding-inline`** 
 * [Tailwind CSS Docs — Margin](https://tailwindcss.com/docs/margin)
 * [Tailwind CSS Docs — Gap](https://tailwindcss.com/docs/gap)
 
----

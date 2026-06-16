@@ -96,4 +96,3 @@ React 固有のうれしい点として、[第23章](chapter23.md)の CVA を使
 * [Class Variance Authority（公式サイト）](https://cva.style/)
 * [tailwind-merge（GitHub）](https://github.com/dcastil/tailwind-merge)
 
----

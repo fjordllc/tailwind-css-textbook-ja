@@ -74,4 +74,3 @@ Tailwind のユーティリティは見た目を整えるだけで、要素の**
 * [W3C — WCAG 2.2 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)
 * [Headless UI（公式サイト）](https://headlessui.com/)
 
----

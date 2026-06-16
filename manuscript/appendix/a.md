@@ -18,4 +18,3 @@
 - **バージョンに注意**: 本書は v4 前提です。古い記事や v3 の docs を見ていないか、URL とバージョン表記を確認しましょう。
 - **Playground と Upgrade guide**: 挙動を試すなら **Tailwind Play**（<https://play.tailwindcss.com/>）、移行するなら **Upgrade guide**（<https://tailwindcss.com/docs/upgrade-guide>）。
 
----

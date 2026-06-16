@@ -103,4 +103,3 @@ Tailwind は使ったクラスだけを生成する（[第4章](../part2/chapter
 * [Tailwind CSS Docs — Detecting classes in source files（@source）](https://tailwindcss.com/docs/detecting-classes-in-source-files)
 * [Tailwind CSS Docs — Theme](https://tailwindcss.com/docs/theme)
 
----

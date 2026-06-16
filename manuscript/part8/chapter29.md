@@ -82,4 +82,3 @@ npx @tailwindcss/upgrade
 * [「Open-sourcing our progress on Tailwind CSS v4.0」（新エンジン Oxide）](https://tailwindcss.com/blog/tailwindcss-v4-alpha)
 * [Tailwind CSS Docs — Upgrade guide（v3 → v4）](https://tailwindcss.com/docs/upgrade-guide)
 
----

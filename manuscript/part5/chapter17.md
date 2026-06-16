@@ -85,4 +85,3 @@ v4 の既定ブレークポイントは次のとおりです（[第6章](../part
 * [Tailwind CSS Docs — Responsive design](https://tailwindcss.com/docs/responsive-design)
 * [Tailwind CSS Docs — Responsive design（Container queries の節）](https://tailwindcss.com/docs/responsive-design)
 
----

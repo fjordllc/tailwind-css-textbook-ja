@@ -90,4 +90,3 @@ React なら、入力要素に `className` を付けるだけです（[第25章]
 * [Tailwind CSS Docs — Field sizing（`field-sizing-content` / `field-sizing-fixed`）](https://tailwindcss.com/docs/field-sizing)
 * [Tailwind CSS Docs — Hover, focus & other states（invalid / required / peer）](https://tailwindcss.com/docs/hover-focus-and-other-states)
 
----

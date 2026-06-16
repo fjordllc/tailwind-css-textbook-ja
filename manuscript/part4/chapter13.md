@@ -79,4 +79,3 @@ v4 では内側に影や輪を入れる `inset-shadow-*`・`inset-ring-*` も加
 * [Tailwind CSS Docs — brightness（`brightness-*`）](https://tailwindcss.com/docs/filter-brightness)
 * [Tailwind CSS Docs — backdrop-blur（`backdrop-blur-*`）](https://tailwindcss.com/docs/backdrop-filter-blur)
 
----

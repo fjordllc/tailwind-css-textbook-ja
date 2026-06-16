@@ -177,4 +177,3 @@ Tailwind に最もよく向けられる批判が、「**クラスが大量に並
 * [Tailwind CSS Docs — Theme（制約・デザイントークン）](https://tailwindcss.com/docs/theme)
 * [Tailwind CSS v4.0（思想と最新動向）](https://tailwindcss.com/blog/tailwindcss-v4)
 
----

@@ -87,4 +87,3 @@ AI が生成した Tailwind コードには、本章のアンチパターンが*
 * [Tailwind CSS Docs — Styling with utility classes（@apply / 重複の管理）](https://tailwindcss.com/docs/styling-with-utility-classes)
 * [Tailwind CSS Docs — Theme（トークンへの集約）](https://tailwindcss.com/docs/theme)
 
----

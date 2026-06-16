@@ -82,4 +82,3 @@ Tailwind CSS 本体は無料のオープンソースです。では Tailwind Lab
 * [Tailwind CSS v4.0（2025-01-22）](https://tailwindcss.com/blog/tailwindcss-v4)
 * [Tailwind CSS GitHub リポジトリ](https://github.com/tailwindlabs/tailwindcss)
 
----

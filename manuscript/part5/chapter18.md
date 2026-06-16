@@ -91,4 +91,3 @@ document.documentElement.classList.toggle('dark')
 * [Tailwind CSS Docs — Dark mode](https://tailwindcss.com/docs/dark-mode)
 * [Tailwind CSS Docs — Functions and directives（@custom-variant）](https://tailwindcss.com/docs/functions-and-directives)
 
----

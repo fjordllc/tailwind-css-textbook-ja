@@ -55,4 +55,3 @@
 | `outline-none` | `outline-hidden` |
 | 既定のボーダー色 `gray-200` | `currentColor` |
 
----

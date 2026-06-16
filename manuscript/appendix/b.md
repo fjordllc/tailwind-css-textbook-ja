@@ -44,4 +44,3 @@
 - レスポンシブ: `sm:` `md:` `lg:` `xl:` `2xl:`（および `max-*:`）
 - その他: `dark:` `group-*:` `peer-*:` `has-*:` `aria-*:` `data-*:` `motion-reduce:`
 
----

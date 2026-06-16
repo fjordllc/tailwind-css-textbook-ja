@@ -220,4 +220,3 @@ CSS エントリに `@import "tailwindcss";` を書き忘れている、ある�
 * [Tailwind CSS Docs — Upgrade guide（v3 → v4）](https://tailwindcss.com/docs/upgrade-guide)
 * [Tailwind Play](https://play.tailwindcss.com/)
 
----

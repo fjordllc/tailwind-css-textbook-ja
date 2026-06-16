@@ -10,4 +10,3 @@
 
 > **本書は Tailwind CSS v4 を前提としています。** v4 では読み込みが `@import "tailwindcss";` の 1 行になり、`tailwind.config.js` は必須ではなくなりました。古い記事に出てくる `@tailwind base; @tailwind components; @tailwind utilities;` という 3 行の書き方は **v3 までのもの**です。本書では使いません。
 
----

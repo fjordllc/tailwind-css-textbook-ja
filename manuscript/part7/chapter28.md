@@ -74,4 +74,3 @@ Tailwind は「あらゆる場面で最善」ではありません。**強みと
 * [Adam Wathan「CSS Utility Classes and "Separation of Concerns"」（関心の分離の再定義）](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
 * [BEM 公式（セマンティック CSS 側の思想）](https://getbem.com/introduction/)
 
----

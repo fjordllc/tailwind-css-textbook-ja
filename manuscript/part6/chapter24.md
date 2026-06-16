@@ -154,4 +154,3 @@ export default class extends Controller {
 * [tailwindcss-rails（GitHub）](https://github.com/rails/tailwindcss-rails)
 * [Rails API — `class_names` / `token_list`](https://api.rubyonrails.org/classes/ActionView/Helpers/TagHelper.html)
 
----

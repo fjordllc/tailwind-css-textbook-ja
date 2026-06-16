@@ -1,5 +1,3 @@
-@import "./mdbook-book-jp.css";
-
 /* 本書専用の上書きはここに書く（テーマ本体 mdbook-book-jp は直接編集しない） */
 
 /* 全ページ共通フッター（textbook-footer.js が各ページに挿入する） */

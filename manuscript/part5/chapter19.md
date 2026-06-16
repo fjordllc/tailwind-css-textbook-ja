@@ -100,4 +100,3 @@ Tailwind では `motion-reduce:` バリアントで対応します。
 * [Tailwind CSS Docs — Animation](https://tailwindcss.com/docs/animation)
 * [Tailwind CSS Docs — Hover, focus & other states（starting / motion-reduce）](https://tailwindcss.com/docs/hover-focus-and-other-states)
 
----

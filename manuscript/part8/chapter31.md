@@ -73,4 +73,3 @@ Tailwind 以外の選択肢も公平に見ておきます。
 * [Adam Wathan「CSS Utility Classes and "Separation of Concerns"」](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
 * [UnoCSS（代替案）](https://unocss.dev/)
 
----
