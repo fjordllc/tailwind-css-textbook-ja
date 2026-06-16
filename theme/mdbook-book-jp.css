@@ -149,14 +149,6 @@ body {
   overflow-wrap: normal;
 }
 
-.content pre code {
-  font-size: 1.42rem;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
 .content details summary {
   margin: -0.2em 0 0;
   padding: 0.2em 0;

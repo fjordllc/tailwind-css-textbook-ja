@@ -1,5 +1,21 @@
 /* 本書専用の上書きはここに書く（テーマ本体 mdbook-book-jp は直接編集しない） */
 
+/*
+ * コードブロックはテーマ切替に追従させたい。
+ * ただし light では本文背景との差が弱いので、light のときだけ少し強めの値を使う。
+ */
+html.light {
+  --textbook-code-bg: #eef3f8;
+  --textbook-code-border: #d6e0ea;
+}
+
+html.coal,
+html.navy,
+html.ayu {
+  --textbook-code-bg: var(--code-bg);
+  --textbook-code-border: var(--code-border);
+}
+
 /* 全ページ共通フッター（textbook-footer.js が各ページに挿入する） */
 .textbook-footer {
   margin-block: 6rem -4rem;
@@ -12,4 +28,21 @@
 
 .textbook-footer a {
   text-decoration: underline;
+}
+
+/*
+ * mdbook-book-jp は `.content pre code { background: transparent; }` を入れる。
+ * このプロジェクトではコードブロックの面が見える方を優先し、pre/code/hljs を同じ背景色に揃える。
+ * light では少しだけコントラストを上げ、他テーマではテーマ変数へ追従させる。
+ */
+.content pre {
+  background: var(--textbook-code-bg) !important;
+  border-color: var(--textbook-code-border) !important;
+  padding: 0 !important;
+}
+
+.content pre code,
+.content pre code.hljs,
+.content pre .hljs {
+  padding: 1.05em 1.15em !important;
 }
