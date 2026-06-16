@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-labelledby="title desc">
+  <title id="title">図 12-1 色の明度スケール</title>
+  <desc id="desc">青の 50 から 950 までを横並びにし、oklch で明度が素直に変わることを示す図。</desc>
+  <rect width="960" height="240" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tiny { font: 500 12px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .sw { rx: 12; }
+  </style>
+  <text x="40" y="38" class="label">図 12-1　1色の明度段階をそろえると、`500 → 600 → 700` が迷いにくい。</text>
+  <rect x="40" y="58" width="880" height="140" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="70" y="92" width="80" height="64" class="sw" fill="#eff6ff"/>
+  <rect x="150" y="92" width="80" height="64" class="sw" fill="#dbeafe"/>
+  <rect x="230" y="92" width="80" height="64" class="sw" fill="#bfdbfe"/>
+  <rect x="310" y="92" width="80" height="64" class="sw" fill="#93c5fd"/>
+  <rect x="390" y="92" width="80" height="64" class="sw" fill="#60a5fa"/>
+  <rect x="470" y="92" width="80" height="64" class="sw" fill="#3b82f6"/>
+  <rect x="550" y="92" width="80" height="64" class="sw" fill="#2563eb"/>
+  <rect x="630" y="92" width="80" height="64" class="sw" fill="#1d4ed8"/>
+  <rect x="710" y="92" width="80" height="64" class="sw" fill="#1e3a8a"/>
+  <rect x="790" y="92" width="80" height="64" class="sw" fill="#172554"/>
+  <text x="90" y="181" class="small">50</text>
+  <text x="170" y="181" class="small">100</text>
+  <text x="250" y="181" class="small">200</text>
+  <text x="330" y="181" class="small">300</text>
+  <text x="410" y="181" class="small">400</text>
+  <text x="490" y="181" class="small">500</text>
+  <text x="570" y="181" class="small">600</text>
+  <text x="650" y="181" class="small">700</text>
+  <text x="730" y="181" class="small">800</text>
+  <text x="810" y="181" class="small">950</text>
+  <text x="40" y="222" class="tiny">oklch では、数字が上がるほど暗くなる段階を保ちやすい。</text>
+</svg>

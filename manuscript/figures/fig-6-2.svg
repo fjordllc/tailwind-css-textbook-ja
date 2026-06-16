@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="title desc">
+  <title id="title">図 6-2 バリアントがセレクタに変換される</title>
+  <desc id="desc">hover:bg-* と md:flex が、それぞれ :hover と @media に変わることを示す図。</desc>
+  <rect width="960" height="260" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .mono { font: 600 15px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .box { rx: 14; stroke-width: 2; }
+    .arrow { stroke: #64748b; stroke-width: 2; fill: none; }
+  </style>
+  <text x="40" y="38" class="label">図 6-2　バリアントは「条件を CSS のセレクタに変える」ための記法。</text>
+  <rect x="40" y="58" width="880" height="150" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="80" y="90" width="150" height="54" class="box" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="109" y="116" class="mono">hover:bg-*</text>
+  <text x="106" y="136" class="small">:hover を作る</text>
+  <line x1="235" y1="117" x2="315" y2="117" class="arrow"/>
+  <polygon points="315,117 305,111 305,123" fill="#64748b"/>
+  <rect x="320" y="90" width="160" height="54" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="356" y="116" class="mono">.x:hover</text>
+  <text x="354" y="136" class="small">条件付き</text>
+
+  <rect x="520" y="90" width="150" height="54" class="box" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="554" y="116" class="mono">md:flex</text>
+  <text x="542" y="136" class="small">@media を作る</text>
+  <line x1="675" y1="117" x2="755" y2="117" class="arrow"/>
+  <polygon points="755,117 745,111 745,123" fill="#64748b"/>
+  <rect x="760" y="90" width="150" height="54" class="box" fill="#bfdbfe" stroke="#60a5fa"/>
+  <text x="793" y="116" class="mono">@media</text>
+  <text x="791" y="136" class="small">幅で絞る</text>
+</svg>

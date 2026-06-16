@@ -56,6 +56,11 @@ Tailwind 版では、**CSS ファイルを 1 行も書いていません**。`ma
 
 ポイントは、これらのクラスは**このカード専用ではない**ことです。`p-6` も `bg-white` も、サイト中のどこでも何度でも使い回せます。だから、新しい部品を作っても CSS は増えません。
 
+<figure>
+<img src="../figures/fig-3-1.svg" alt="従来は CSS が HTML に依存し、Tailwind は HTML が CSS に依存することを示す図">
+<figcaption>図 3-1　依存の向きの反転。`.hero-title` 方式は CSS → HTML に依存し、Tailwind は HTML → CSS に依存する。</figcaption>
+</figure>
+
 ## 3.2 なぜインラインスタイルではダメなのか
 
 ここで多くの人が抱く疑問があります。「クラスをたくさん並べるくらいなら、`style` 属性で直接書くインラインスタイルと同じでは？」というものです。

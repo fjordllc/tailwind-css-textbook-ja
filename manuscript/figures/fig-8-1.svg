@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="title desc">
+  <title id="title">図 8-1 フレームワーク別のビルド主体</title>
+  <desc id="desc">Rails は gem、React/Vite は Vite、Next.js は PostCSS が CSS をビルドすることを示す図。</desc>
+  <rect width="960" height="260" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .box { rx: 14; stroke-width: 2; }
+  </style>
+  <text x="40" y="38" class="label">図 8-1　Tailwind の入れ方は、CSS を誰がビルドするかで分かれる。</text>
+  <rect x="40" y="58" width="880" height="150" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="80" y="92" width="180" height="56" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="140" y="118" class="small">Rails</text>
+  <text x="102" y="140" class="small">gem がビルド</text>
+  <rect x="305" y="92" width="180" height="56" class="box" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="356" y="118" class="small">Vite</text>
+  <text x="332" y="140" class="small">プラグインでビルド</text>
+  <rect x="530" y="92" width="180" height="56" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="570" y="118" class="small">Next.js</text>
+  <text x="554" y="140" class="small">PostCSS がビルド</text>
+  <rect x="755" y="92" width="120" height="56" class="box" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="785" y="118" class="small">共通</text>
+  <text x="770" y="140" class="small">1枚の CSS</text>
+</svg>

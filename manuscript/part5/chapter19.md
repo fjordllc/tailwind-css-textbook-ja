@@ -36,6 +36,11 @@
 
 v4 では、これらが個別の CSS プロパティ（`translate`・`scale`・`rotate`）として扱われるようになり、3D の変形（`rotate-x-*` など）も扱えます。
 
+<figure>
+<img src="../figures/fig-19-2.svg" alt="translate scale rotate がレイアウトを変えず見た目だけ変えることを示す図">
+<figcaption>図 19-2　transform の 3 種は、レイアウトを動かさず見た目だけを変える。</figcaption>
+</figure>
+
 ## 19.3 組み込みアニメーションとカスタム
 
 繰り返し動き続けるアニメーションには、組み込みのユーティリティがあります。

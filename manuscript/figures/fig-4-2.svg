@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">図 4-2 Cascade layers の優先順位</title>
+  <desc id="desc">theme, base, components, utilities が下に行くほど後勝ちになる階層を示す図。</desc>
+  <rect width="960" height="280" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .box { rx: 14; stroke-width: 2; }
+  </style>
+  <text x="40" y="38" class="label">図 4-2　`theme → base → components → utilities` の順で重なり、後ろが勝つ。</text>
+  <rect x="40" y="58" width="880" height="180" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="130" y="88" width="160" height="38" class="box" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="178" y="113" class="small">theme</text>
+  <rect x="250" y="112" width="160" height="38" class="box" fill="#e2e8f0" stroke="#cbd5e1"/>
+  <text x="300" y="137" class="small">base</text>
+  <rect x="370" y="136" width="160" height="38" class="box" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="398" y="161" class="small">components</text>
+  <rect x="490" y="160" width="160" height="38" class="box" fill="#93c5fd" stroke="#3b82f6"/>
+  <text x="532" y="185" class="small" fill="#0f172a">utilities</text>
+  <text x="680" y="185" class="small">← いちばん後ろが強い</text>
+  <text x="130" y="222" class="small">同じ要素に複数の規則が当たっても、最終的には utilities が優先される。</text>
+</svg>

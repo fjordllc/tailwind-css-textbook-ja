@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">図 1-1 CSS の歴史年表</title>
+  <desc id="desc">素のCSS、OOCSS/SMACSS/BEM、CSS-in-JS、Atomic/Tailwind の流れと残った課題を示す年表。</desc>
+  <rect width="960" height="300" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 13px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tiny { font: 500 11px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+    .line { stroke: #94a3b8; stroke-width: 2; }
+    .dot { fill: #60a5fa; }
+  </style>
+  <text x="40" y="38" class="label">図 1-1　CSS の歴史は、「壊れやすさへの対処」を探す流れだった。</text>
+  <rect x="40" y="58" width="880" height="200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <line x1="100" y1="150" x2="860" y2="150" class="line"/>
+  <circle cx="150" cy="150" r="8" class="dot"/>
+  <circle cx="330" cy="150" r="8" class="dot"/>
+  <circle cx="510" cy="150" r="8" class="dot"/>
+  <circle cx="690" cy="150" r="8" class="dot"/>
+  <circle cx="830" cy="150" r="8" class="dot"/>
+  <text x="116" y="118" class="small">素の CSS</text>
+  <text x="88" y="200" class="tiny">グローバル / 詳細度 / 順番</text>
+  <text x="286" y="111" class="small">OOCSS / SMACSS</text>
+  <text x="309" y="130" class="small">BEM</text>
+  <text x="275" y="200" class="tiny">命名で秩序を作る</text>
+  <text x="470" y="118" class="small">CSS-in-JS</text>
+  <text x="445" y="200" class="tiny">実行時コストと一貫性</text>
+  <text x="625" y="111" class="small">Atomic /</text>
+  <text x="614" y="130" class="small">Functional</text>
+  <text x="620" y="200" class="tiny">命名せずに組む</text>
+  <text x="815" y="118" class="small">Tailwind</text>
+  <text x="782" y="200" class="tiny">仕組み化された Utility First</text>
+</svg>

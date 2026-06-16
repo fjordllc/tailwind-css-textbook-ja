@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-labelledby="title desc">
+  <title id="title">図 10-2 spacing スケールの目盛り</title>
+  <desc id="desc">--spacing を基準に p-1, p-2, p-4, p-6, p-8 が 4px 刻みで伸びる定規を示す図。</desc>
+  <rect width="960" height="240" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tick { stroke: #64748b; stroke-width: 2; }
+    .base { stroke: #3b82f6; stroke-width: 5; }
+  </style>
+  <text x="40" y="38" class="label">図 10-2　`--spacing` を 1 目盛りとして、余白は 4px 刻みで伸びる。</text>
+  <rect x="40" y="58" width="880" height="140" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <line x1="90" y1="130" x2="870" y2="130" class="base"/>
+  <g class="tick">
+    <line x1="90" y1="116" x2="90" y2="144"/>
+    <line x1="167" y1="120" x2="167" y2="140"/>
+    <line x1="244" y1="116" x2="244" y2="144"/>
+    <line x1="321" y1="120" x2="321" y2="140"/>
+    <line x1="398" y1="116" x2="398" y2="144"/>
+    <line x1="475" y1="120" x2="475" y2="140"/>
+    <line x1="552" y1="116" x2="552" y2="144"/>
+    <line x1="629" y1="120" x2="629" y2="140"/>
+    <line x1="706" y1="116" x2="706" y2="144"/>
+    <line x1="783" y1="120" x2="783" y2="140"/>
+    <line x1="860" y1="116" x2="860" y2="144"/>
+  </g>
+  <text x="82" y="164" class="small">0</text>
+  <text x="156" y="164" class="small">p-1</text>
+  <text x="233" y="164" class="small">p-2</text>
+  <text x="309" y="164" class="small">p-3</text>
+  <text x="386" y="164" class="small">p-4</text>
+  <text x="463" y="164" class="small">p-5</text>
+  <text x="540" y="164" class="small">p-6</text>
+  <text x="617" y="164" class="small">p-7</text>
+  <text x="694" y="164" class="small">p-8</text>
+  <text x="768" y="164" class="small">... </text>
+  <text x="40" y="222" class="small">数字は 4px の倍数を数える。`p-4 = 16px`、`p-8 = 32px`。</text>
+</svg>

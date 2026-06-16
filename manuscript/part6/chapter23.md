@@ -47,6 +47,11 @@ twMerge('px-2 py-1 bg-red-500', 'p-3 bg-blue-500')
 
 実務では、`clsx`（条件分岐）と `twMerge`（衝突解消）を組み合わせた **`cn` というヘルパー**を用意するのが定番です。
 
+<figure>
+<img src="../figures/fig-23-1.svg" alt="clsx が条件で集め、tailwind-merge が衝突を解消し、cn が最終クラス列にする流れを示す図">
+<figcaption>図 23-1　`cn` の役割分担。`clsx` で集め、`tailwind-merge` で衝突を解消し、最終クラス列にする。</figcaption>
+</figure>
+
 ```ts
 // よくある cn ヘルパー
 import { clsx, type ClassValue } from 'clsx'

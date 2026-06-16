@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="title desc">
+  <title id="title">図 23-1 cn の役割分担</title>
+  <desc id="desc">clsx が条件で集め、tailwind-merge が衝突を解消し、最終的なクラス列になる流れを示す図。</desc>
+  <rect width="960" height="260" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .mono { font: 600 14px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .box { rx: 14; stroke-width: 2; }
+    .arrow { stroke: #64748b; stroke-width: 2; fill: none; }
+  </style>
+  <text x="40" y="38" class="label">図 23-1　`cn` は `clsx` で集め、`tailwind-merge` で衝突を解き、1本の列にまとめる。</text>
+  <rect x="40" y="58" width="880" height="150" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="80" y="92" width="170" height="56" class="box" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="132" y="118" class="small">clsx</text>
+  <text x="95" y="140" class="small">条件で集める</text>
+  <rect x="305" y="92" width="170" height="56" class="box" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="322" y="118" class="small">tailwind-merge</text>
+  <text x="341" y="140" class="small">後勝ちで解く</text>
+  <rect x="530" y="92" width="170" height="56" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="589" y="118" class="small">cn</text>
+  <text x="547" y="140" class="small">最終クラス列</text>
+  <line x1="250" y1="120" x2="302" y2="120" class="arrow"/>
+  <polygon points="302,120 292,114 292,126" fill="#64748b"/>
+  <line x1="475" y1="120" x2="527" y2="120" class="arrow"/>
+  <polygon points="527,120 517,114 517,126" fill="#64748b"/>
+  <text x="760" y="120" class="mono">px-4 bg-blue-600</text>
+  <text x="760" y="144" class="small">必要な分だけ残る</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">図 6-3 バリアントのスタック</title>
+  <desc id="desc">dark:md:hover: が外側から内側へ条件を絞る様子を入れ子の帯で示す図。</desc>
+  <rect width="960" height="280" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .mono { font: 600 15px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .box { rx: 14; stroke-width: 2; }
+    .arrow { fill: #64748b; }
+  </style>
+  <text x="40" y="38" class="label">図 6-3　`dark:md:hover:` は、外から内へ条件を重ねていく。</text>
+  <rect x="40" y="58" width="880" height="180" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="90" y="102" width="780" height="68" class="box" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="110" y="131" class="small">dark</text>
+  <text x="110" y="155" class="tiny">ダークモード</text>
+  <rect x="240" y="114" width="520" height="44" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="260" y="142" class="small">md</text>
+  <text x="260" y="160" class="tiny">768px 以上</text>
+  <rect x="390" y="122" width="220" height="28" class="box" fill="#bfdbfe" stroke="#3b82f6"/>
+  <text x="438" y="141" class="small">hover</text>
+  <text x="330" y="204" class="mono">dark:  →  md:  →  hover:</text>
+  <text x="610" y="204" class="small">条件を一つずつ絞る</text>
+</svg>

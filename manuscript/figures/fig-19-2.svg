@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">図 19-2 transform の3種</title>
+  <desc id="desc">translate, scale, rotate がレイアウトを変えず見た目だけを変えることを示す before after 図。</desc>
+  <rect width="960" height="280" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .box { rx: 14; stroke-width: 2; }
+  </style>
+  <text x="40" y="38" class="label">図 19-2　`translate` / `scale` / `rotate` は、レイアウトを動かさず見た目だけ変える。</text>
+  <rect x="40" y="58" width="880" height="180" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="90" y="104" width="120" height="58" class="box" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="118" y="138" class="small">before</text>
+  <rect x="260" y="92" width="120" height="58" class="box" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="286" y="126" class="small">translate</text>
+  <rect x="430" y="84" width="120" height="72" class="box" fill="#bfdbfe" stroke="#3b82f6"/>
+  <text x="466" y="127" class="small">scale</text>
+  <rect x="600" y="92" width="120" height="58" class="box" fill="#ede9fe" stroke="#a78bfa" transform="rotate(-8 660 121)"/>
+  <text x="636" y="126" class="small">rotate</text>
+  <text x="760" y="130" class="small">見た目だけ変わる</text>
+</svg>

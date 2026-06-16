@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">図 17-1 メディアクエリとコンテナクエリの違い</title>
+  <desc id="desc">メディアクエリは画面幅、コンテナクエリは親要素の幅に反応することを対比する図。</desc>
+  <rect width="960" height="300" fill="#ffffff"/>
+  <style>
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 14px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .box { rx: 14; stroke-width: 2; }
+    .arrow { stroke: #64748b; stroke-width: 2; fill: none; }
+  </style>
+  <text x="40" y="38" class="label">図 17-1　メディアクエリは「画面」、コンテナクエリは「親要素」に反応する。</text>
+  <rect x="40" y="58" width="880" height="200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <rect x="80" y="92" width="350" height="120" class="box" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="100" y="120" class="small">メディアクエリ</text>
+  <text x="100" y="146" class="small">画面幅が広いかどうかで決まる</text>
+  <text x="100" y="172" class="small">ページ全体のレイアウト向き</text>
+  <line x1="155" y1="214" x2="155" y2="246" class="arrow"/>
+  <polygon points="155,250 149,240 161,240" fill="#64748b"/>
+  <text x="120" y="268" class="small">window width</text>
+
+  <rect x="530" y="92" width="350" height="120" class="box" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="550" y="120" class="small">コンテナクエリ</text>
+  <text x="550" y="146" class="small">親要素の幅で決まる</text>
+  <text x="550" y="172" class="small">再利用する部品向き</text>
+  <line x1="690" y1="214" x2="690" y2="246" class="arrow"/>
+  <polygon points="690,250 684,240 696,240" fill="#64748b"/>
+  <text x="648" y="268" class="small">container width</text>
+</svg>
