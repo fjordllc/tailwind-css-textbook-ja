@@ -39,8 +39,8 @@
   --accent: var(--links);
   --accent-strong: var(--links);
   --accent-soft: rgba(255, 255, 255, 0.08);
-  --code-bg: var(--quote-bg, rgba(255, 255, 255, 0.04));
-  --code-border: var(--table-border-color, rgba(255, 255, 255, 0.12));
+  --code-bg: rgba(255, 255, 255, 0.1);
+  --code-border: var(--table-border-color, rgba(255, 255, 255, 0.16));
   --blockquote-bg: var(--quote-bg, rgba(255, 255, 255, 0.04));
   --table-border: var(--table-border-color, rgba(255, 255, 255, 0.12));
   --surface-alt: var(--table-header-bg, rgba(255, 255, 255, 0.04));
@@ -178,6 +178,19 @@ summary:focus-visible,
   border: 1px solid var(--code-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+/*
+ * runnable な Rust ブロックは <pre><pre class="playground"> と入れ子になる。
+ * パネル装飾は外側の pre だけに効かせ、内側はリセットして二重枠を防ぐ。
+ */
+.content pre pre {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 
 .content img {
