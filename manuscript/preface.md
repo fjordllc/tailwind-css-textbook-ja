@@ -1,5 +1,8 @@
 # はじめに
 
+> **FBC Press: Tailwind CSS**
+> ― 仕組みと思想から理解する
+
 本書は、プログラミングスクール **[FjordBootCamp（フィヨルドブートキャンプ）](https://bootcamp.fjord.jp/)** の教材として作成された、Tailwind CSS の教科書です。
 
 本書は、Tailwind CSS のクラス一覧ではありません。
