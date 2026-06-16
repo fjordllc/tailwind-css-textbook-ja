@@ -81,6 +81,11 @@ document.documentElement.classList.toggle('dark')
 
 こうしておけば、HTML は `bg-surface text-foreground` と書くだけで両モードに対応します。`dark:` を個別に書く量が激減し、配色の調整も CSS 変数の 1 か所で済みます。
 
+<figure>
+<img src="../figures/fig-18-1.svg" alt="ライトとダークで同じ bg-surface text-foreground を使い、:root と .dark でトークン値だけが差し替わる図">
+<figcaption>図 18-1　ダークモード: 同じ class のまま、`:root` と `.dark` でトークン値を差し替えて色が変わる。</figcaption>
+</figure>
+
 ## 参考資料
 
 * [Tailwind CSS Docs — Dark mode](https://tailwindcss.com/docs/dark-mode)

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">図 19-1 transition の有無で変化の仕方が違う</title>
+  <desc id="desc">transition がないと瞬時に切り替わり、transition があると duration の時間をかけて滑らかに変化することを示す図。</desc>
+  <rect width="960" height="360" fill="#ffffff"/>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tiny { font: 500 13px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+    .mono { font: 600 14px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .line { stroke: #64748b; stroke-width: 2; }
+    .dash { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 6 6; }
+    .blue { fill: #bfdbfe; }
+    .blue2 { fill: #60a5fa; }
+    .teal { fill: #ccfbf1; }
+    .teal2 { fill: #2dd4bf; }
+    .note { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; rx: 12; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="360" class="bg"/>
+  <text x="40" y="42" class="label">図 19-1　`transition` は状態変化を `duration` の時間でつなぐ。`ease-*` は緩急を決める。</text>
+
+  <rect x="40" y="62" width="880" height="220" class="panel"/>
+
+  <text x="70" y="100" class="small">transition なし</text>
+  <rect x="210" y="84" width="150" height="30" class="blue"/>
+  <rect x="360" y="84" width="150" height="30" class="blue2"/>
+  <line x1="360" y1="99" x2="360" y2="99" class="line"/>
+  <text x="525" y="104" class="tiny">hover の瞬間に切り替わる</text>
+
+  <text x="70" y="165" class="small">transition あり</text>
+  <rect x="210" y="149" width="150" height="30" class="blue"/>
+  <rect x="360" y="149" width="60" height="30" class="teal"/>
+  <rect x="420" y="149" width="60" height="30" class="teal"/>
+  <rect x="480" y="149" width="60" height="30" class="teal2"/>
+  <rect x="540" y="149" width="120" height="30" class="blue2"/>
+  <line x1="210" y1="202" x2="660" y2="202" class="dash"/>
+  <polygon points="660,202 648,195 648,209" fill="#94a3b8"/>
+  <text x="314" y="214" class="tiny">duration-200 の 200ms で補間</text>
+  <text x="210" y="232" class="mono">0ms</text>
+  <text x="460" y="232" class="mono">中間</text>
+  <text x="620" y="232" class="mono">200ms</text>
+
+  <rect x="700" y="132" width="180" height="62" class="note"/>
+  <text x="720" y="157" class="small">`duration-*`</text>
+  <text x="720" y="179" class="tiny">変化にかける時間</text>
+  <rect x="700" y="204" width="180" height="62" class="note"/>
+  <text x="720" y="229" class="small">`ease-*`</text>
+  <text x="720" y="251" class="tiny">速度の緩急</text>
+</svg>

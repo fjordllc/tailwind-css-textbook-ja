@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">図 10-1 padding / margin / gap の違い</title>
+  <desc id="desc">padding は内側、margin は外側、gap は子要素どうしの間隔であることを示した図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .outer { fill: #f8fbfe; stroke: #93c5fd; stroke-width: 2; }
+      .border { fill: #ffffff; stroke: #60a5fa; stroke-width: 2; }
+      .padding { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; }
+      .content { fill: #ffffff; stroke: #0284c7; stroke-width: 2; }
+      .gapbox { fill: #eff6ff; stroke: #93c5fd; stroke-width: 2; }
+      .label { font: 700 22px sans-serif; fill: #0369a1; }
+      .text { font: 600 19px sans-serif; fill: #0f172a; }
+      .note { font: 500 16px sans-serif; fill: #475569; }
+      .small { font: 600 16px monospace; fill: #0f172a; }
+      .arrow { stroke: #0284c7; stroke-width: 3; marker-end: url(#arrowhead); fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="620"/>
+
+  <text class="label" x="90" y="54">padding / margin / gap</text>
+
+  <rect class="outer" x="90" y="90" width="420" height="340" rx="18" ry="18"/>
+  <text class="text" x="118" y="130">margin = 外側</text>
+  <rect class="border" x="120" y="150" width="360" height="250" rx="16" ry="16"/>
+  <text class="note" x="150" y="182">border</text>
+  <rect class="padding" x="150" y="200" width="300" height="170" rx="14" ry="14"/>
+  <text class="note" x="178" y="232">padding = 内側</text>
+  <rect class="content" x="190" y="245" width="220" height="95" rx="12" ry="12"/>
+  <text class="text" x="245" y="300" text-anchor="middle">内容</text>
+
+  <text class="note" x="90" y="470">p-4 / m-4 / gap-4</text>
+
+  <text class="label" x="660" y="130">gap = 子要素どうしの間</text>
+  <rect class="gapbox" x="660" y="160" width="150" height="100" rx="16" ry="16"/>
+  <rect class="gapbox" x="850" y="160" width="150" height="100" rx="16" ry="16"/>
+  <rect class="gapbox" x="1040" y="160" width="80" height="100" rx="16" ry="16"/>
+  <text class="text" x="735" y="220" text-anchor="middle">子 A</text>
+  <text class="text" x="925" y="220" text-anchor="middle">子 B</text>
+  <text class="text" x="1080" y="220" text-anchor="middle">子 C</text>
+  <path class="arrow" d="M810 210 L850 210"/>
+  <path class="arrow" d="M1000 210 L1040 210"/>
+  <text class="note" x="700" y="290">Flex / Grid のコンテナに付ける</text>
+
+  <rect class="outer" x="630" y="340" width="430" height="120" rx="18" ry="18"/>
+  <text class="note" x="660" y="385">使い分け</text>
+  <text class="text" x="660" y="420">内側 = padding / 外側 = margin / 間 = gap</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">図 17-2 レスポンシブの上書きの重なり方</title>
+  <desc id="desc">無印が全幅の土台で、md 以上と lg 以上がその上に重なって上書きされる様子を、画面幅の帯で示す図。</desc>
+  <rect width="960" height="420" fill="#ffffff"/>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+    .axis { stroke: #64748b; stroke-width: 2; }
+    .grid { stroke: #e2e8f0; stroke-width: 1.5; }
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tiny { font: 500 13px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+    .mono { font: 600 15px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .base { fill: #dbeafe; }
+    .md { fill: #bfdbfe; }
+    .lg { fill: #93c5fd; }
+    .result { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; rx: 12; }
+    .tick { stroke: #64748b; stroke-width: 2; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="420" class="bg"/>
+  <text x="40" y="42" class="label">図 17-2　モバイルファーストでは、無印が土台で、`md:` / `lg:` はその幅以上で上書きする。</text>
+
+  <rect x="40" y="70" width="880" height="250" class="panel"/>
+
+  <line x1="150" y1="110" x2="150" y2="280" class="grid"/>
+  <line x1="260" y1="110" x2="260" y2="280" class="grid"/>
+  <line x1="370" y1="110" x2="370" y2="280" class="grid"/>
+  <line x1="580" y1="110" x2="580" y2="280" class="grid"/>
+  <line x1="800" y1="110" x2="800" y2="280" class="grid"/>
+
+  <line x1="130" y1="145" x2="870" y2="145" class="axis"/>
+  <polygon points="870,145 858,138 858,152" fill="#64748b"/>
+
+  <text x="72" y="122" class="tiny">画面幅</text>
+  <text x="62" y="170" class="tiny">無印</text>
+  <text x="62" y="217" class="tiny">md:</text>
+  <text x="62" y="264" class="tiny">lg:</text>
+
+  <rect x="130" y="158" width="740" height="22" class="base"/>
+  <rect x="370" y="205" width="500" height="22" class="md"/>
+  <rect x="580" y="252" width="290" height="22" class="lg"/>
+
+  <text x="430" y="174" class="mono">text-sm</text>
+  <text x="530" y="221" class="mono">md:text-base</text>
+  <text x="640" y="268" class="mono">lg:text-xl</text>
+
+  <text x="148" y="126" class="tiny">0</text>
+  <text x="238" y="126" class="tiny">640px</text>
+  <text x="348" y="126" class="tiny">768px</text>
+  <text x="558" y="126" class="tiny">1024px</text>
+
+  <text x="105" y="304" class="small">無印 = すべての画面で効く土台</text>
+  <text x="346" y="304" class="small">md 以上で上書き</text>
+  <text x="566" y="304" class="small">lg 以上でさらに上書き</text>
+
+  <rect x="40" y="338" width="880" height="50" class="result"/>
+  <text x="66" y="369" class="small">結果: 0〜639px は text-sm / 640〜767px も text-sm / 768〜1023px は md:text-base / 1024px 以上は lg:text-xl</text>
+</svg>

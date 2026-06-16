@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380" role="img" aria-labelledby="title desc">
+  <title id="title">図 6-1 group と peer の作用</title>
+  <desc id="desc">group は親の状態が子に伝わり、peer は同じ階層の兄弟の状態が別要素に伝わることを示す図。</desc>
+  <rect width="960" height="380" fill="#ffffff"/>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+    .label { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+    .small { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+    .tiny { font: 500 13px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+    .mono { font: 600 14px "SFMono-Regular", Consolas, monospace; fill: #0f172a; }
+    .card { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.6; rx: 14; }
+    .accent { fill: #dbeafe; stroke: #60a5fa; stroke-width: 1.6; }
+    .accent2 { fill: #ede9fe; stroke: #a78bfa; stroke-width: 1.6; }
+    .arrow { fill: #64748b; }
+    .line { stroke: #64748b; stroke-width: 2; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="380" class="bg"/>
+  <text x="40" y="42" class="label">図 6-1　`group-*` は親の状態が子に伝わり、`peer-*` は兄弟の状態が別要素に伝わる。</text>
+
+  <rect x="40" y="70" width="430" height="240" class="panel"/>
+  <text x="60" y="102" class="small">group</text>
+  <text x="60" y="124" class="tiny">親の状態 → 子の見た目</text>
+  <rect x="86" y="144" width="320" height="120" class="card"/>
+  <text x="108" y="168" class="tiny">a.group</text>
+  <rect x="106" y="182" width="110" height="48" class="accent"/>
+  <text x="128" y="210" class="small">タイトル</text>
+  <rect x="240" y="182" width="110" height="48" class="card"/>
+  <text x="258" y="210" class="small">本文</text>
+  <line x1="160" y1="182" x2="160" y2="162" class="line"/>
+  <polygon points="160,158 154,168 166,168" class="arrow"/>
+  <text x="188" y="170" class="tiny">group-hover:</text>
+  <text x="186" y="250" class="mono">hover で子が変わる</text>
+
+  <rect x="500" y="70" width="420" height="240" class="panel"/>
+  <text x="520" y="102" class="small">peer</text>
+  <text x="520" y="124" class="tiny">兄弟の状態 → もう一方の見た目</text>
+  <rect x="536" y="144" width="120" height="44" class="accent2"/>
+  <text x="560" y="171" class="small">入力</text>
+  <rect x="676" y="144" width="160" height="44" class="card"/>
+  <text x="696" y="171" class="small">エラーメッセージ</text>
+  <line x1="596" y1="188" x2="596" y2="228" class="line"/>
+  <polygon points="596,232 590,222 602,222" class="arrow"/>
+  <text x="624" y="206" class="tiny">peer-invalid:</text>
+  <text x="624" y="258" class="mono">invalid で表示</text>
+
+  <rect x="40" y="326" width="880" height="34" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" rx="12"/>
+  <text x="62" y="348" class="small">group は「親」を起点に、peer は「同じ階層の兄弟」を起点にする。役割が違うので、使い分ける。</text>
+</svg>

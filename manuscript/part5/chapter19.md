@@ -15,6 +15,11 @@
 - `ease-out` … 変化の緩急（イージング）
 - `delay-*` … 開始を遅らせる
 
+<figure>
+<img src="../figures/fig-19-1.svg" alt="transition がないと状態変化は瞬時に切り替わり、transition があると duration の時間をかけて滑らかに変化することを示す図">
+<figcaption>図 19-1　`transition` は状態の変化を `duration` の時間で滑らかにつなぐ。`ease-*` は変化の緩急を決める。</figcaption>
+</figure>
+
 ## 19.2 transform
 
 **トランスフォーム**は、要素を移動・拡大・回転させます。レイアウトに影響を与えずに見た目を動かせるので、アニメーションと相性が良い機能です。

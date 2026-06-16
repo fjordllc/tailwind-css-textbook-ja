@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+  <title id="title">図 15-1 Flexbox の主軸と交差軸</title>
+  <desc id="desc">flex-row と flex-col で、justify-* が主軸、items-* が交差軸に効くことを示した図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
+      .chip { fill: #dbeafe; stroke: #0284c7; stroke-width: 2; }
+      .label { font: 700 20px sans-serif; fill: #0369a1; }
+      .text { font: 600 18px sans-serif; fill: #0f172a; }
+      .note { font: 500 16px sans-serif; fill: #475569; }
+      .axis { stroke: #0284c7; stroke-width: 4; marker-end: url(#arrowhead); fill: none; }
+      .axis2 { stroke: #0f172a; stroke-width: 2; stroke-dasharray: 6 6; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="540"/>
+
+  <text class="label" x="90" y="56">主軸 = justify-* / 交差軸 = items-*</text>
+
+  <rect class="panel" x="70" y="90" width="500" height="360" rx="18" ry="18"/>
+  <text class="label" x="100" y="130">flex-row</text>
+  <text class="note" x="100" y="156">主軸 = 横 / 交差軸 = 縦</text>
+  <path class="axis" d="M160 220 L430 220"/>
+  <path class="axis2" d="M270 180 L270 300"/>
+  <text class="note" x="450" y="226">justify</text>
+  <text class="note" x="278" y="172">items</text>
+  <rect class="chip" x="120" y="250" width="70" height="70" rx="12" ry="12"/>
+  <rect class="chip" x="220" y="250" width="70" height="70" rx="12" ry="12"/>
+  <rect class="chip" x="320" y="250" width="70" height="70" rx="12" ry="12"/>
+  <text class="text" x="155" y="292" text-anchor="middle">A</text>
+  <text class="text" x="255" y="292" text-anchor="middle">B</text>
+  <text class="text" x="355" y="292" text-anchor="middle">C</text>
+  <text class="note" x="100" y="390">justify-* は横方向の並び</text>
+  <text class="note" x="100" y="418">items-* は縦方向のそろえ</text>
+
+  <rect class="panel" x="630" y="90" width="500" height="360" rx="18" ry="18"/>
+  <text class="label" x="660" y="130">flex-col</text>
+  <text class="note" x="660" y="156">主軸 = 縦 / 交差軸 = 横</text>
+  <path class="axis" d="M880 180 L880 330"/>
+  <path class="axis2" d="M770 250 L980 250"/>
+  <text class="note" x="892" y="176">justify</text>
+  <text class="note" x="1000" y="256">items</text>
+  <rect class="chip" x="800" y="195" width="160" height="44" rx="12" ry="12"/>
+  <rect class="chip" x="800" y="255" width="160" height="44" rx="12" ry="12"/>
+  <rect class="chip" x="800" y="315" width="160" height="44" rx="12" ry="12"/>
+  <text class="text" x="880" y="223" text-anchor="middle">A</text>
+  <text class="text" x="880" y="283" text-anchor="middle">B</text>
+  <text class="text" x="880" y="343" text-anchor="middle">C</text>
+  <text class="note" x="660" y="390">justify-* は縦方向の並び</text>
+  <text class="note" x="660" y="418">items-* は横方向のそろえ</text>
+</svg>

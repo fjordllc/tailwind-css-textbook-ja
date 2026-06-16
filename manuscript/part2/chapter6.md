@@ -80,6 +80,11 @@
 
 入力欄（`peer`）が `:invalid` のとき、後ろのメッセージが表示されます。JavaScript を書かずに、状態と見た目を連動させられるのがポイントです（フォームは[第20章](../part5/chapter20.md)）。
 
+<figure>
+<img src="../figures/fig-6-1.svg" alt="group は親の状態が子に伝わり、peer は兄弟の状態が別要素に伝わることを示す図">
+<figcaption>図 6-1　`group-*` / `peer-*` の作用。親の状態が子に、兄弟の状態が別要素に伝わる。</figcaption>
+</figure>
+
 ## 6.5 メディア系のバリアント
 
 画面や環境の条件に応じたバリアントです。中身は CSS のメディアクエリです。
