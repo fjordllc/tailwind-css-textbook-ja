@@ -52,7 +52,7 @@
 
 - **各章末に必ず `## 参考資料` を置く。**
 - URL を必ず明記する。一次情報（公式 docs / 公式 Blog / GitHub / リリースノート / Adam Wathan の発信）を優先し、第三者ブログは補助に留める。
-- 掲載前に **WebFetch で URL の実在を確認**する（リンク切れ・移転を防ぐ）。
+- 掲載前に URL の実在を確認する（リンク切れ・移転を防ぐ）。
 - v4 で URL 構造が変わった項目に注意（例: `tailwindcss.com/docs/<utility>` 形式）。
 
 ## 6. Markdown / mdBook の注意

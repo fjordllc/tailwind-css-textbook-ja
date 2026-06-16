@@ -6,7 +6,7 @@
 使い方:
 
 1. `book.toml` の `additional-css` で `theme/mdbook-book-jp.css` を先に読み込む
-2. 各書籍の `theme/*.css` で色・余白・見出しサイズなどの変数を上書きする
+2. 本書固有の `theme/*.css` で色・余白・見出しサイズなどの変数を上書きする
 3. `tailwind-css-textbook.css` のような書籍固有 CSS には、テーマ本体ではなくその書籍だけの差分を書く
 
 このリポジトリでは `tailwind-css-textbook.css` が書籍固有の上書きになっています。
