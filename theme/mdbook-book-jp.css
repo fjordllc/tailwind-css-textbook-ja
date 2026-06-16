@@ -13,8 +13,6 @@ html:lang(ja) {
     sans-serif;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
-  font-feature-settings: "kern" 1, "palt" 1;
-  font-variant-east-asian: proportional-width;
   line-break: strict;
   word-break: normal;
   overflow-wrap: anywhere;
@@ -25,9 +23,9 @@ body {
   line-height: 1.8;
 }
 
-@supports (text-spacing: trim-start) {
+@supports (text-spacing-trim: trim-start) {
   html:lang(ja) {
-    text-spacing: trim-start allow-end;
+    text-spacing-trim: trim-start;
   }
 }
 
@@ -157,6 +155,27 @@ body {
   border: 0;
   padding: 0;
   box-shadow: none;
+}
+
+.content details summary {
+  margin: -0.2em 0 0;
+  padding: 0.2em 0;
+}
+
+.content details[open] summary {
+  margin-bottom: 0.55em;
+}
+
+.content figure {
+  text-align: center;
+}
+
+.content figure img {
+  margin-inline: auto;
+}
+
+.content figcaption {
+  text-align: left;
 }
 
 .chapter li {

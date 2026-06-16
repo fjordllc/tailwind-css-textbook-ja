@@ -28,7 +28,7 @@
 
 ## 13.3 影とリング
 
-**影（`shadow-*`）**は、要素を浮き上がって見せます。v4 のスケールは小さい順に `shadow-2xs`・`shadow-xs`・`shadow-sm`・`shadow-md`・`shadow-lg`・`shadow-xl`・`shadow-2xl`、無しは `shadow-none` です。
+<strong>影（`shadow-*`）</strong>は、要素を浮き上がって見せます。v4 のスケールは小さい順に `shadow-2xs`・`shadow-xs`・`shadow-sm`・`shadow-md`・`shadow-lg`・`shadow-xl`・`shadow-2xl`、無しは `shadow-none` です。
 
 ```html
 <div class="shadow-md">少し浮いたカード</div>
@@ -78,4 +78,3 @@ v4 では内側に影や輪を入れる `inset-shadow-*`・`inset-ring-*` も加
 * [Tailwind CSS Docs — blur（`blur-*`）](https://tailwindcss.com/docs/filter-blur)
 * [Tailwind CSS Docs — brightness（`brightness-*`）](https://tailwindcss.com/docs/filter-brightness)
 * [Tailwind CSS Docs — backdrop-blur（`backdrop-blur-*`）](https://tailwindcss.com/docs/backdrop-filter-blur)
-

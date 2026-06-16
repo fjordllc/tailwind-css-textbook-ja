@@ -4,7 +4,7 @@
 
 余白は、デザインの印象を最も大きく左右する要素のひとつです。素の CSS では `padding: 16px` のように好きな値を書けますが、[第3章](../part1/chapter3.md)で見たとおり、この自由さがチーム開発では余白のばらつきを生みます。
 
-Tailwind は、余白を**スケール（段階的な値の並び）**として提供します。そして v4 では、このスケールが[第5章](../part2/chapter5.md)で見た `--spacing` というたった 1 つの基準値から計算されます。
+Tailwind は、余白を<strong>スケール（段階的な値の並び）</strong>として提供します。そして v4 では、このスケールが[第5章](../part2/chapter5.md)で見た `--spacing` というたった 1 つの基準値から計算されます。
 
 ```css
 /* p-4 が生成する CSS（簡略化） */
@@ -97,4 +97,3 @@ v4 では、横方向が `padding-left/right` ではなく **`padding-inline`** 
 * [Tailwind CSS Docs — Padding](https://tailwindcss.com/docs/padding)
 * [Tailwind CSS Docs — Margin](https://tailwindcss.com/docs/margin)
 * [Tailwind CSS Docs — Gap](https://tailwindcss.com/docs/gap)
-

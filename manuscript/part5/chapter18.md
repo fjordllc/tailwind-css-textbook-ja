@@ -42,7 +42,7 @@ document.documentElement.classList.toggle('dark')
 
 ## 18.4 トグル実装とちらつき対策
 
-手動切替で必ずぶつかるのが、**初期表示のちらつき（FOUC: Flash of Unstyled Content）**です。ページ読み込み時、JavaScript で `.dark` を付ける前に一瞬ライトモードが表示され、直後に暗転する——この不快なちらつきです。
+手動切替で必ずぶつかるのが、<strong>初期表示のちらつき（FOUC: Flash of Unstyled Content）</strong>です。ページ読み込み時、JavaScript で `.dark` を付ける前に一瞬ライトモードが表示され、直後に暗転する——この不快なちらつきです。
 
 原因は、「`.dark` を付ける JavaScript が、画面の描画より後に走る」ことです。対策は、**描画前（`<head>` の早い段階）に、同期的なスクリプトで `.dark` を決定する**ことです。
 
@@ -90,4 +90,3 @@ document.documentElement.classList.toggle('dark')
 
 * [Tailwind CSS Docs — Dark mode](https://tailwindcss.com/docs/dark-mode)
 * [Tailwind CSS Docs — Functions and directives（@custom-variant）](https://tailwindcss.com/docs/functions-and-directives)
-

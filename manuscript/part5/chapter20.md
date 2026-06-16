@@ -4,7 +4,7 @@
 
 フォーム要素（`<input>`・`<select>`・チェックボックスなど）は、ブラウザや OS によって見た目がバラバラで、しかも素の状態ではユーティリティで整えにくいという厄介な性質があります。チェックボックスの色を変えるだけでも、本来は手間がかかります。
 
-これを解決するのが公式プラグイン **`@tailwindcss/forms`** です。このプラグインは、フォーム要素に**ユーティリティで上書きしやすい素直なリセット（土台のスタイル）**を当てます。これを入れておくと、`<input>` や `<select>` を、ふつうのユーティリティ（`rounded`・`border`・`focus:ring-2` など）でそのまま整えられるようになります。
+これを解決するのが公式プラグイン **`@tailwindcss/forms`** です。このプラグインは、フォーム要素に<strong>ユーティリティで上書きしやすい素直なリセット（土台のスタイル）</strong>を当てます。これを入れておくと、`<input>` や `<select>` を、ふつうのユーティリティ（`rounded`・`border`・`focus:ring-2` など）でそのまま整えられるようになります。
 
 既定では、このプラグインは **2 つを同時に提供**します。1 つはフォーム要素すべてにグローバルに当たるリセット、もう 1 つは `form-input`・`form-select`・`form-multiselect`・`form-checkbox`・`form-radio`・`form-textarea` というクラス群です。何も設定しなければ両方が使えます。
 
@@ -89,4 +89,3 @@ React なら、入力要素に `className` を付けるだけです（[第25章]
 * [@tailwindcss/forms（GitHub）](https://github.com/tailwindlabs/tailwindcss-forms)
 * [Tailwind CSS Docs — Field sizing（`field-sizing-content` / `field-sizing-fixed`）](https://tailwindcss.com/docs/field-sizing)
 * [Tailwind CSS Docs — Hover, focus & other states（invalid / required / peer）](https://tailwindcss.com/docs/hover-focus-and-other-states)
-

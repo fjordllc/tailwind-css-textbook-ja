@@ -55,7 +55,35 @@
 - 掲載前に **WebFetch で URL の実在を確認**する（リンク切れ・移転を防ぐ）。
 - v4 で URL 構造が変わった項目に注意（例: `tailwindcss.com/docs/<utility>` 形式）。
 
-## 6. 確認済みの基準 URL（全章で再利用）
+## 6. Markdown / mdBook の注意
+
+- 日本語文中で強調を使うとき、前後の日本語と `**...**` を密着させない。mdBook の Markdown 解釈で、`**` がそのまま HTML に残ることがある。
+- 文中に自然に埋め込む強調は、必要に応じて `<strong>...</strong>` を使う。
+
+悪い例:
+
+```md
+残るピースが**バリアント**です。
+余白を**スケール（段階的な値の並び）**として提供します。
+```
+
+よい例:
+
+```md
+残るピースが<strong>バリアント</strong>です。
+余白を<strong>スケール（段階的な値の並び）</strong>として提供します。
+```
+
+- 箇条書きや文頭など、前後に空白や句読点があり mdBook で正しく変換される場合は `**...**` を使ってよい。
+- 修正後は `mdbook build` を実行し、生成 HTML に意図しない `**` が残っていないか確認する。
+
+```bash
+rg -n "\*\*" book -g '*.html' -g '!searchindex.js'
+```
+
+ただし、`**/*.erb` のような glob、Tailwind の `**:`、mdBook 内部の `O(n**2)` のような文字列は誤検出なので、本文の強調崩れだけを修正対象にする。
+
+## 7. 確認済みの基準 URL（全章で再利用）
 
 - [ユーティリティファースト](https://tailwindcss.com/docs/styling-with-utility-classes)
 - [テーマ](https://tailwindcss.com/docs/theme)
