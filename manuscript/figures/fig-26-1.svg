@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" role="img" aria-labelledby="title desc">
+  <title id="title">図 26-1 CSS エントリの構成順</title>
+  <desc id="desc">Tailwind の CSS エントリを、Tailwind 本体、プラグイン、テーマ、ソース指定、自前の追加の順に積み上げる図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .layer { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
+      .muted { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; }
+      .title { font: 700 28px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+      .label { font: 700 21px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #075985; }
+      .code { font: 600 18px monospace; fill: #0f172a; }
+      .note { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+      .num { font: 700 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+  <rect class="bg" width="980" height="620"/>
+  <text class="title" x="54" y="52">CSS エントリは、置き場所を固定すると迷わない</text>
+
+  <g transform="translate(96 96)">
+    <rect class="layer" x="0" y="0" width="788" height="76" rx="16"/>
+    <circle cx="38" cy="38" r="18" fill="#0284c7"/>
+    <text class="num" x="32" y="45">1</text>
+    <text class="label" x="74" y="32">Tailwind 本体</text>
+    <text class="code" x="74" y="58">@import "tailwindcss";</text>
+
+    <rect class="muted" x="0" y="94" width="788" height="76" rx="16"/>
+    <circle cx="38" cy="132" r="18" fill="#64748b"/>
+    <text class="num" x="32" y="139">2</text>
+    <text class="label" x="74" y="126">@plugin</text>
+    <text class="code" x="74" y="152">@plugin "@tailwindcss/forms";</text>
+
+    <rect class="layer" x="0" y="188" width="788" height="76" rx="16"/>
+    <circle cx="38" cy="226" r="18" fill="#0284c7"/>
+    <text class="num" x="32" y="233">3</text>
+    <text class="label" x="74" y="220">@theme</text>
+    <text class="code" x="74" y="246">--color-primary: ...;</text>
+
+    <rect class="muted" x="0" y="282" width="788" height="76" rx="16"/>
+    <circle cx="38" cy="320" r="18" fill="#64748b"/>
+    <text class="num" x="32" y="327">4</text>
+    <text class="label" x="74" y="314">@source</text>
+    <text class="code" x="74" y="340">@source "../node_modules/...";</text>
+
+    <rect class="layer" x="0" y="376" width="788" height="76" rx="16"/>
+    <circle cx="38" cy="414" r="18" fill="#0284c7"/>
+    <text class="num" x="32" y="421">5</text>
+    <text class="label" x="74" y="408">自前の追加</text>
+    <text class="code" x="74" y="434">@utility / @layer base</text>
+  </g>
+
+  <text class="note" x="96" y="578">「本体 → プラグイン → テーマ → ソース指定 → 自前の追加」の順にしておくと、チームで置き場所を共有しやすい。</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">図 24-1 Rails コンポーネント化の段階</title>
+  <desc id="desc">Rails のビューを partial から ViewComponent、必要に応じて Phlex や Ruby のバリアントビルダーへ段階的に育てる流れを示す図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
+      .box { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
+      .alt { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; }
+      .title { font: 700 28px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+      .label { font: 700 22px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0369a1; }
+      .text { font: 600 17px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+      .small { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+      .arrow { stroke: #0284c7; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="500"/>
+  <text class="title" x="48" y="52">Rails では、必要になった段階で部品化を育てる</text>
+
+  <rect class="panel" x="58" y="92" width="1084" height="280" rx="18"/>
+
+  <rect class="box" x="96" y="150" width="230" height="132" rx="16"/>
+  <text class="label" x="146" y="190">partial</text>
+  <text class="text" x="126" y="224">まず重複を減らす</text>
+  <text class="small" x="124" y="254">Rails 標準 / 低コスト</text>
+
+  <path class="arrow" d="M326 216 L406 216"/>
+  <text class="small" x="342" y="136">ロジック・テストが</text>
+  <text class="small" x="358" y="156">必要になったら</text>
+
+  <rect class="box" x="414" y="150" width="250" height="132" rx="16"/>
+  <text class="label" x="460" y="190">ViewComponent</text>
+  <text class="text" x="444" y="224">Ruby クラスとして管理</text>
+  <text class="small" x="448" y="254">再利用 / テストしやすい</text>
+
+  <path class="arrow" d="M664 216 L744 216"/>
+  <text class="small" x="678" y="136">より Ruby で</text>
+  <text class="small" x="680" y="156">完結したいなら</text>
+
+  <rect class="alt" x="754" y="128" width="300" height="176" rx="16"/>
+  <text class="label" x="842" y="168">Phlex</text>
+  <text class="text" x="804" y="202">HTML を Ruby で書く</text>
+  <text class="small" x="804" y="232">合成・継承を多用したいとき</text>
+  <line x1="784" y1="256" x2="1024" y2="256" stroke="#cbd5e1" stroke-width="2"/>
+  <text class="label" x="818" y="284">Ruby 版 CVA</text>
+  <text class="small" x="806" y="314">バリアントが増えたらハッシュで整理</text>
+
+  <text class="small" x="92" y="420">いきなり大きな仕組みにしない。partial で痛みを減らし、必要になったら ViewComponent / Phlex / バリアント管理へ進む。</text>
+</svg>

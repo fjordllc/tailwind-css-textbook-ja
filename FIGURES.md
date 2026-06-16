@@ -243,6 +243,10 @@
 | 図 18-1 | §18.5 | ダークモード: 同じ class のまま、`:root` と `.dark` でトークン値を差し替えて色が変わる | 対比 |
 | 図 23-1 | §23.3 | `cn` の役割分担（clsx=条件で集める → tailwind-merge=衝突を解消 → 最終クラス列） | フロー |
 | 図 8-1 | §8.1 | フレームワーク別「ビルドを誰が回すか」（Rails=gem / Vite / PostCSS） | 対比 |
+| 図 7-1 | §7.1 | 導入経路の選び方。Play CDN / Vite / PostCSS / Rails gem / CLI を、目的とビルド主体で分岐させる | 分岐図 |
+| 図 21-1 | §21.2 | `sr-only` と `display: none` の違い。画面上の非表示と支援技術からの非表示を区別する | 比較図 |
+| 図 24-1 | §24.1 | Rails のコンポーネント化を partial → ViewComponent → Phlex / Ruby 版 CVA へ段階的に育てる | フロー |
+| 図 26-1 | §26.1 | CSS エントリの構成順。`@import` → `@plugin` → `@theme` → `@source` → 自前追加 | 積層図 |
 
 ---
 

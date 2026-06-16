@@ -23,6 +23,11 @@ Tailwind のユーティリティは見た目を整えるだけで、要素の**
 
 `sr-only` は、要素を視覚的に消しつつ（`display: none` とは違い）支援技術には読み上げさせる、という CSS を当てます（実体は `position: absolute; width: 1px; height: 1px; overflow: hidden; ...` といった定番のテクニックです）。`display: none` だと読み上げからも消えてしまうので、この使い分けが重要です。逆に「狭い画面では隠し、広い画面では見せる」には `sr-only sm:not-sr-only` のように `not-sr-only` で打ち消します。
 
+<figure>
+<img src="../figures/fig-21-1.svg" alt="sr-only は画面には見えないがスクリーンリーダーには読まれ、display none は画面にも支援技術にも出ないことを比較する図。">
+<figcaption>図 21-1　`sr-only` は視覚的に隠すだけで、`display: none` は支援技術からも隠してしまう。</figcaption>
+</figure>
+
 ## 21.3 フォーカス可視化（focus-visible とリング）
 
 キーボードだけで操作する人にとって、「いまどこにフォーカスがあるか」が見えることは死活問題です。ところがデザインの都合で、ブラウザ標準のフォーカス枠を `outline-none` で消してしまう例が後を絶ちません。**フォーカスの可視化を消すなら、必ず代わりを用意する**のが鉄則です。
@@ -73,4 +78,3 @@ Tailwind のユーティリティは見た目を整えるだけで、要素の**
 * [MDN — `:focus-visible`](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
 * [W3C — WCAG 2.2 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)
 * [Headless UI（公式サイト）](https://headlessui.com/)
-

@@ -30,6 +30,11 @@ Tailwind プロジェクトの心臓は、たった 1 つの CSS エントリフ
 
 「**本体 → プラグイン → テーマ → ソース指定 → 自前の追加**」という順序を固定しておくと、どこに何を書くか迷いません。チームで共有する規約として、ファイル冒頭にコメントでこの構成を書いておくのも有効です。
 
+<figure>
+<img src="../figures/fig-26-1.svg" alt="Tailwind の CSS エントリを、Tailwind 本体、プラグイン、テーマ、ソース指定、自前の追加の順に積み上げる図。">
+<figcaption>図 26-1　CSS エントリは、`@import`、`@plugin`、`@theme`、`@source`、自前の追加の順に並べる。</figcaption>
+</figure>
+
 ## 26.2 テーマ・トークンの置き場所と命名規約
 
 [第5章](../part2/chapter5.md)で見たテーマ変数は、プロジェクトの「デザインの真実」です。実務では、命名規約を決めておくと一貫性が保てます。
@@ -102,4 +107,3 @@ Tailwind は使ったクラスだけを生成する（[第4章](../part2/chapter
 * [Tailwind CSS Docs — Functions and directives（@plugin / @utility / @layer）](https://tailwindcss.com/docs/functions-and-directives)
 * [Tailwind CSS Docs — Detecting classes in source files（@source）](https://tailwindcss.com/docs/detecting-classes-in-source-files)
 * [Tailwind CSS Docs — Theme](https://tailwindcss.com/docs/theme)
-

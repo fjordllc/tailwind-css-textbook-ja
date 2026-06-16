@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">図 21-1 sr-only と display none の違い</title>
+  <desc id="desc">sr-only は画面には見えないがスクリーンリーダーには読まれ、display none は画面にも支援技術にも出ないことを比較する図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .good { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
+      .bad { fill: #fff7f7; stroke: #ef4444; stroke-width: 2; }
+      .screen { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; }
+      .labelGood { font: 700 22px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0369a1; }
+      .labelBad { font: 700 22px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #b91c1c; }
+      .text { font: 600 18px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+      .note { font: 500 16px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+      .code { font: 600 17px monospace; fill: #0f172a; }
+    </style>
+  </defs>
+  <rect class="bg" width="1120" height="430"/>
+  <text class="text" x="48" y="48">視覚的に隠すことと、存在ごと消すことは違う</text>
+
+  <rect class="good" x="64" y="82" width="470" height="276" rx="18"/>
+  <text class="labelGood" x="96" y="124">○ sr-only</text>
+  <rect class="screen" x="96" y="150" width="180" height="92" rx="12"/>
+  <text class="note" x="132" y="186">画面</text>
+  <text class="note" x="122" y="214">見えない</text>
+  <rect class="screen" x="322" y="150" width="180" height="92" rx="12"/>
+  <text class="note" x="354" y="186">支援技術</text>
+  <text class="note" x="350" y="214">読み上げる</text>
+  <text class="code" x="96" y="286">&lt;span class="sr-only"&gt;検索&lt;/span&gt;</text>
+  <text class="note" x="96" y="324">アイコンだけのボタンに、意味のあるラベルを残せる。</text>
+
+  <rect class="bad" x="586" y="82" width="470" height="276" rx="18"/>
+  <text class="labelBad" x="618" y="124">✕ display: none</text>
+  <rect class="screen" x="618" y="150" width="180" height="92" rx="12"/>
+  <text class="note" x="654" y="186">画面</text>
+  <text class="note" x="644" y="214">見えない</text>
+  <rect class="screen" x="844" y="150" width="180" height="92" rx="12"/>
+  <text class="note" x="876" y="186">支援技術</text>
+  <text class="note" x="878" y="214">読まない</text>
+  <text class="code" x="618" y="286">display: none;</text>
+  <text class="note" x="618" y="324">見た目だけでなく、アクセシビリティツリーからも消える。</text>
+</svg>

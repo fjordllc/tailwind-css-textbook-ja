@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">図 7-1 Tailwind CSS の導入経路</title>
+  <desc id="desc">Tailwind CSS の導入経路を、学習用、本番用、フレームワーク専用、単体ビルドに分けて選ぶ流れを示す図。</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #f8fbfe; stroke: #d8e1ea; stroke-width: 2; }
+      .box { fill: #f0f9ff; stroke: #0284c7; stroke-width: 2; }
+      .muted { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; }
+      .warn { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
+      .title { font: 700 28px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #0f172a; }
+      .label { font: 700 21px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #075985; }
+      .text { font: 600 17px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #334155; }
+      .small { font: 500 15px "Hiragino Sans", "Yu Gothic", sans-serif; fill: #475569; }
+      .arrow { stroke: #0284c7; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="520"/>
+  <text class="title" x="48" y="52">導入経路は「目的」と「ビルド主体」で選ぶ</text>
+
+  <rect class="panel" x="48" y="84" width="1104" height="370" rx="18"/>
+
+  <rect class="warn" x="90" y="128" width="220" height="96" rx="16"/>
+  <text class="label" x="124" y="164">Play CDN</text>
+  <text class="text" x="120" y="192">学習・試作</text>
+  <text class="small" x="112" y="214">本番には使わない</text>
+
+  <rect class="box" x="400" y="106" width="260" height="118" rx="16"/>
+  <text class="label" x="452" y="145">Vite プラグイン</text>
+  <text class="text" x="442" y="177">React / Vue / Svelte</text>
+  <text class="small" x="452" y="202">Vite が CSS をビルド</text>
+
+  <rect class="box" x="750" y="106" width="260" height="118" rx="16"/>
+  <text class="label" x="820" y="145">PostCSS</text>
+  <text class="text" x="826" y="177">Next.js など</text>
+  <text class="small" x="800" y="202">既存の PostCSS 経路へ</text>
+
+  <rect class="muted" x="400" y="294" width="260" height="118" rx="16"/>
+  <text class="label" x="462" y="333">Rails gem</text>
+  <text class="text" x="444" y="365">tailwindcss-rails</text>
+  <text class="small" x="442" y="390">Rails の bin/dev で監視</text>
+
+  <rect class="muted" x="750" y="294" width="260" height="118" rx="16"/>
+  <text class="label" x="838" y="333">CLI</text>
+  <text class="text" x="808" y="365">単体で CSS 生成</text>
+  <text class="small" x="808" y="390">小規模・学習向き</text>
+
+  <path class="arrow" d="M310 176 L392 166"/>
+  <path class="arrow" d="M660 166 L742 166"/>
+  <path class="arrow" d="M310 204 C350 280, 360 345, 392 352"/>
+  <path class="arrow" d="M660 352 L742 352"/>
+
+  <text class="small" x="88" y="470">まず触るだけなら Play CDN。実プロジェクトでは Vite / PostCSS / Rails gem / CLI から、使っている環境に合わせて選ぶ。</text>
+</svg>
