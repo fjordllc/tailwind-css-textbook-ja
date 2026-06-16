@@ -1,1 +1,17 @@
 @import "./mdbook-book-jp.css";
+
+/* 本書専用の上書きはここに書く（テーマ本体 mdbook-book-jp は直接編集しない） */
+
+/* 全ページ共通フッター（textbook-footer.js が各ページに挿入する） */
+.textbook-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  font-size: 0.85em;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.textbook-footer a {
+  text-decoration: underline;
+}
